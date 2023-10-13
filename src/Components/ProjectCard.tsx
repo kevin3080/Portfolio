@@ -5,7 +5,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { image, title, description, technology, UriDemo, UriRepo } = project;
+  const { title, description, technology } = project;
 
   return (
     <div className=" shadow-lg p-1 m-4 max-w-sm">
