@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+body {
+  background-color: #05112a;
+  color: white;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+.btn-resume {
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
+}
+
+.btn-resume:hover {
+  background-color: #0090ff;
+  border-color: #0090ff;
+  color: white;
+}
+
+.btn-portfolio {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+.btn-portfolio:hover {
+  background-color: transparent;
+  border-color: #0090ff;
+  color: #0090ff;
+}
+
+h2 span {
+  font-weight: bold;
+}
+
+h2 strong {
+  color: #0090ff;
+}

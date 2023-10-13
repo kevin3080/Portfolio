@@ -1,0 +1,15 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+
+  "inicio.hi": "Hi, i'm Kevin 👋",
+  "inicio.prof": "Frontend Developer",
+  "inicio.p": "that loves creating web apps.",
+  "inicio.resume": "Resume",
+  "inicio.portfolio": "Portfolio",
+
+  "about.me": "About me",
+  "about.p1": "I am a passionate, creative and persistent programmer. I like to solve problems and create"
+}

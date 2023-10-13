@@ -1,0 +1,15 @@
+{
+  "nav.home": "Inicio",
+  "nav.about": "Sobre mí",
+  "nav.projects": "Proyectos",
+  "nav.contact": "Contacto",
+
+  "inicio.hi": "Hola, soy Kevin 👋",
+  "inicio.prof": "Desarrollador Frontend",
+  "inicio.p": "me encanta crear aplicaciones web.",
+  "inicio.resume": "Curriculum",
+  "inicio.portfolio": "Portafolio",
+
+  "about.me": "Sobre mí",
+  "about.p1": "Soy un programador apasionado, creativo y persistente. Me gusta resolver problemas y crear"
+}

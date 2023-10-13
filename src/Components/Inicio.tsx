@@ -1,0 +1,66 @@
+import autor from '../assets/imagen-mia.jpeg';
+import Translation from '../translate/Translation';
+
+export const Inicio = () => {
+  return (
+    <section className="container mx-auto flex h-screen items-center place-content-evenly w-[90%] md:w-[80%] sm:w-[90%] lg:w-[85%]">
+      <section>
+        <div>
+          <p className="text-3xl">
+            <Translation translationKey="inicio.hi" />
+          </p>
+          <h1 className="text-5xl text-corp ">
+            <Translation translationKey="inicio.prof" />
+          </h1>
+          <p className="text-3xl">
+            <Translation translationKey="inicio.p" />
+          </p>
+        </div>
+
+        <div className="flex mt-8">
+          <button className="btn-resume w-30 flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1">
+            <p className="mr-1">
+              <Translation translationKey="inicio.resume" />
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+              />
+            </svg>
+          </button>
+          <button className="btn-portfolio w-30 flex items-center ml-4 bg-corp border border-corp rounded-md  pr-4  pl-4 pt-1 pb-1  ">
+            <p className="mr-1">
+              <Translation translationKey="inicio.portfolio" />
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <div className=" w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+        <img src={autor} alt="" className="object-cover h-full w-full" />
+      </div>
+    </section>
+  );
+};
