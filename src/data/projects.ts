@@ -1,11 +1,9 @@
 import { Projects } from '../Interfaces';
-import project1 from '../assets/proyect1-md.png';
-import project2 from '../assets/proyect2.png';
 
 const projects: Projects[] = [
   {
     id: 1,
-    image: project1,
+    image: '',
     title: 'Crud Node-React',
     description: 'Eccomerce built with React and Tailwind CSS',
     technology: ['React', 'Node.js', 'Tailwind', 'CSS'],
@@ -14,7 +12,7 @@ const projects: Projects[] = [
   },
   {
     id: 2,
-    image: project2,
+    image: '',
     title: 'Prueba de componentes',
     description: 'Descripcion del proyecto',
     technology: ['React', 'Node.js', 'Tailwind', 'CSS'],
@@ -23,7 +21,7 @@ const projects: Projects[] = [
   },
   {
     id: 3,
-    image: project1,
+    image: '',
     title: 'Crud Node-React',
     description: 'Eccomerce built with React and Tailwind CSS',
     technology: ['React', 'Node.js', 'Tailwind', 'CSS'],
@@ -32,7 +30,7 @@ const projects: Projects[] = [
   },
   {
     id: 4,
-    image: project2,
+    image: '',
     title: 'Prueba de componentes',
     description: 'Descripcion del proyecto',
     technology: ['React', 'Node.js', 'Tailwind', 'CSS'],
@@ -41,7 +39,7 @@ const projects: Projects[] = [
   },
   {
     id: 5,
-    image: project1,
+    image: '',
     title: 'Crud Node-React',
     description: 'Eccomerce built with React and Tailwind CSS',
     technology: ['React', 'Node.js', 'Tailwind', 'CSS'],
@@ -50,7 +48,7 @@ const projects: Projects[] = [
   },
   {
     id: 6,
-    image: project2,
+    image: '',
     title: 'Prueba de componentes',
     description: 'Descripcion del proyecto',
     technology: ['React', 'Node.js', 'Tailwind', 'CSS'],
