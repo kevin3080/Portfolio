@@ -8,7 +8,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { title, description, technology } = project;
 
   return (
-    <div className=" shadow-lg p-1 m-4 max-w-sm">
+    <div className="shadow-lg p-1 m-4 max-w-sm">
       <div
         className="w-[325px] h-[236px] overflow-hidden bg-white rounded-t-2xl
 

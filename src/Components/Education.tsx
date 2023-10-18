@@ -2,7 +2,8 @@ export const Education = () => {
   return (
     <section className="container mx-auto  w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%] mt-5">
       <h3 className="text-2xl ">Education:</h3>
-      <section className="grid grid-cols-2 gap-1 ">
+
+      <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-1 ">
         <section className="m-3">
           <h3 className="">React: De cero a experto ( Hooks y MERN )</h3>
           <ul>

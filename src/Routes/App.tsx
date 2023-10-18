@@ -5,11 +5,10 @@ import { Inicio } from '../Components/Inicio';
 import { Navbar } from '../Components/Navbar';
 import { Projects } from '../Components/Projects';
 import { Footer } from '../Components/Footer';
-import { LangageProvider } from '../Context/LanguageContext';
 
 const App = () => {
   return (
-    <LangageProvider>
+    <>
       <Navbar />
       <Inicio />
       <Abaut />
@@ -17,7 +16,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-    </LangageProvider>
+    </>
   );
 };
 

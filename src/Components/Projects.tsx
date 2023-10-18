@@ -13,8 +13,8 @@ export const Projects: React.FC = () => {
           <span className="text-corp">program.</span>
         </p>
       </section>
-      <section className="flex justify-center mt-11">
-        <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6 bg-corp hover:bg-transparent border rounded-md border-corp">
+      <section className="flex justify-center flex-col flex-wrap w-[20%] md:w-[100%] lg:flex-row mt-11">
+        <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6 bg-corp hover:bg-transparent ml-20 lg:ml-0 border rounded-md border-corp">
           Todos
         </button>
         <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent ml-20 border rounded-md border-corp">
