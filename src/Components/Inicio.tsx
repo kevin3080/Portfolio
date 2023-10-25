@@ -4,7 +4,7 @@ import Translation from '../translate/Translation';
 export const Inicio = () => {
    return (
       <section className="container mx-auto flex h-screen items-center place-content-evenly w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%]">
-         <section>
+         <section className="">
             <div>
                <p className="text-3xl">
                   <Translation translationKey="inicio.hi" />
