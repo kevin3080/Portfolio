@@ -7,17 +7,17 @@ import { Projects } from '../Components/Projects';
 import { Footer } from '../Components/Footer';
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Inicio />
-      <Abaut />
-      <Education />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
-  );
+   return (
+      <>
+         {/* <Navbar /> */}
+         <Inicio />
+         <Abaut />
+         <Education />
+         <Projects />
+         <Contact />
+         <Footer />
+      </>
+   );
 };
 
 export default App;
