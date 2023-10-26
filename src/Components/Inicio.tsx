@@ -4,22 +4,22 @@ import Translation from '../translate/Translation';
 export const Inicio = () => {
    return (
       <section className="container mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%]">
-         <section className="w-[80%] mt-8 lg:mt-0 flex flex-col">
-            <div>
-               <p className="text-3xl">
+         <section className="mt-8 lg:mt-0 flex flex-col items-center lg:items-start ">
+            <div className="lg:mr-20 w-[250px]  sm:w-auto text-center lg:text-left">
+               <p className="text-2xl lg:text-3xl">
                   <Translation translationKey="inicio.hi" />
                </p>
-               <h1 className="text-5xl text-corp ">
+               <h1 className="text-4xl lg:text-5xl text-corp">
                   <Translation translationKey="inicio.prof" />
                </h1>
-               <p className="text-3xl ">
+               <p className="text-2xl lg:text-3xl">
                   <Translation translationKey="inicio.p" />
                </p>
             </div>
 
             <div className="flex mt-8">
-               <button className="btn-resume w-30 flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1">
-                  <p className="mr-1">
+               <button className="btn-resume w-30 flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1">
+                  <p className="">
                      <Translation translationKey="inicio.resume" />
                   </p>
                   <svg
@@ -37,8 +37,8 @@ export const Inicio = () => {
                      />
                   </svg>
                </button>
-               <button className="btn-portfolio w-30 flex items-center ml-4 bg-corp border border-corp rounded-md  pr-4  pl-4 pt-1 pb-1  ">
-                  <p className="mr-1">
+               <button className="btn-portfolio w-30 flex items-center ml-4 bg-corp border border-corp rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1 ">
+                  <p className="">
                      <Translation translationKey="inicio.portfolio" />
                   </p>
                   <svg
@@ -58,7 +58,7 @@ export const Inicio = () => {
                </button>
             </div>
          </section>
-         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden">
             <img src={autor} alt="" className="object-cover h-full w-full" />
          </div>
       </section>
