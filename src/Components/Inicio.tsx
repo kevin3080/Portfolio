@@ -3,8 +3,8 @@ import Translation from '../translate/Translation';
 
 export const Inicio = () => {
    return (
-      <section className="container mx-auto flex h-screen items-center place-content-evenly w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%]">
-         <section className="">
+      <section className="container mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%]">
+         <section className="w-[80%] mt-8 lg:mt-0 flex flex-col">
             <div>
                <p className="text-3xl">
                   <Translation translationKey="inicio.hi" />
@@ -12,7 +12,7 @@ export const Inicio = () => {
                <h1 className="text-5xl text-corp ">
                   <Translation translationKey="inicio.prof" />
                </h1>
-               <p className="text-3xl">
+               <p className="text-3xl ">
                   <Translation translationKey="inicio.p" />
                </p>
             </div>
@@ -58,7 +58,7 @@ export const Inicio = () => {
                </button>
             </div>
          </section>
-         <div className=" w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden">
             <img src={autor} alt="" className="object-cover h-full w-full" />
          </div>
       </section>

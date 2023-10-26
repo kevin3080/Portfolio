@@ -11,7 +11,7 @@ export const Navbar = () => {
    };
    const { language, toggleLanguage } = useLanguage();
    return (
-      <nav className="mx-auto container w-[10%] md:w-[80%] sm:w-[90%] lg:w-[80%]">
+      <nav className="mx-auto container md:w-[80%] sm:w-[90%] lg:w-[80%]">
          <div className="flex items-center justify-between">
             <div className="navbar-brand">
                <h3 className="navbar-name">
