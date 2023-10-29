@@ -12,7 +12,7 @@ export const BurguerButton: React.FC<BurguerButtonProps> = ({
          <svg
             className={buttonClass}
             viewBox="0 0 100 100"
-            width="80"
+            width="60"
             onClick={handlerClick}
          >
             <path

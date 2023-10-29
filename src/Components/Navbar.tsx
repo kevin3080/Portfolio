@@ -13,8 +13,8 @@ export const Navbar = () => {
    const { language, toggleLanguage } = useLanguage();
    return (
       <div className="fixed w-full ">
-         <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between p-4 pl-0 pr-0 bg-[#05112a]">
-            <h2 className="text-4xl font-bold bold z-10 md:text-4xl">
+         <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between lg:p-4 pl-0 pr-0 bg-[#05112a]">
+            <h2 className="text-[2rem] font-bold z-10">
                KevDev<strong>.</strong>
             </h2>
             <div className="lg:hidden overflow-hidden z-10">
