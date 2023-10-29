@@ -1,7 +1,12 @@
 /* Navbar.css */
-
-.navbar-hamburger {
-   @apply inline-block ml-4;
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
 }
 
 .navbar-name {
@@ -34,17 +39,13 @@
    border-bottom: 0.1rem solid #0090ff;
 }
 
-.navbar-controls {
-   display: flex;
-   align-items: center;
-}
-
 .language-button,
 .theme-button {
    margin-left: 0.5rem;
    padding: 5px 5px;
    border: none;
    cursor: pointer;
+   font-size: 1.2rem;
 }
 
 .theme-button {
@@ -53,4 +54,124 @@
 
 .language-button {
    color: #0090ff;
+}
+
+.nav-link {
+   color: #fff;
+   text-align: center;
+   position: relative;
+   text-decoration: none;
+   display: inline-block;
+}
+
+.nav-link {
+   border: 1px solid transparent;
+   -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+   transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+}
+
+.nav-link::before {
+   content: '';
+   position: absolute;
+   left: 0px;
+   bottom: 0px;
+   width: 0%;
+   height: 1px;
+   background: #6098ff;
+   box-shadow: inset 0px 0px 0px #6098ff;
+   display: block;
+   -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+   transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+}
+
+.nav-link:hover::before {
+   width: 100%;
+}
+
+.nav-link::after {
+   content: '';
+   position: absolute;
+   right: 0px;
+   top: 0px;
+
+   width: 0%;
+   height: 1px;
+   background: #6098ff;
+   -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+   transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+}
+.nav-link:hover::after {
+   width: 100%;
+}
+.nav-link:hover {
+   border-left: 1px solid #6098ff;
+   border-right: 1px solid #6098ff;
+}
+
+.ham {
+   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+   transition: transform 400ms;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.hamRotate.active {
+   transform: rotate(45deg);
+}
+
+.line {
+   fill: none;
+   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+   stroke: #0090ff;
+   stroke-width: 5.5;
+   stroke-linecap: round;
+}
+
+.ham4 .top {
+   stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+   stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+   stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+   stroke-dashoffset: -68px;
+}
+
+.bur.active {
+   width: 100%;
+   display: block;
+   position: absolute;
+   margin-left: auto;
+   margin-right: auto;
+   top: 200%;
+   left: 0;
+   right: 0;
+   text-align: center;
+   transition: all 0.3s ease;
+}
+
+.bg-bur {
+   position: absolute;
+   background-color: #071739;
+   width: 100%;
+   height: 100%;
+   top: -700px;
+   left: -1000px;
+}
+
+.bg-bur.active {
+   border-radius: 0 0 40% 0;
+   top: 0;
+   right: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   transition: all 0.3s ease;
+   opacity: 0.96;
 }
