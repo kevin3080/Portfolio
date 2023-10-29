@@ -14,7 +14,7 @@ export const Navbar = () => {
    return (
       <div className="fixed w-full ">
          <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between p-4 pl-0 pr-0 bg-[#05112a]">
-            <h2 className="text-4xl lg:text-5xl font-bold bold z-10 md:text-4xl">
+            <h2 className="text-4xl font-bold bold z-10 md:text-4xl">
                KevDev<strong>.</strong>
             </h2>
             <div className="lg:hidden overflow-hidden z-10">
@@ -33,25 +33,25 @@ export const Navbar = () => {
             >
                <a
                   href=""
-                  className="nav-link text-white text-3xl lg:text-2xl p-3  font-bold block mb-8 lg:inline lg:mr-6"
+                  className="nav-link text-white text-xl p-3  font-bold block mb-8 lg:inline lg:mr-6"
                >
                   <Translation translationKey="nav.home" />
                </a>
                <a
                   href=""
-                  className="nav-link text-white text-3xl lg:text-2xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
+                  className="nav-link text-white text-xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
                >
                   <Translation translationKey="nav.about" />
                </a>
                <a
                   href=""
-                  className="nav-link text-white text-3xl lg:text-2xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
+                  className="nav-link text-white text-xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
                >
                   <Translation translationKey="nav.projects" />
                </a>
                <a
                   href=""
-                  className="nav-link text-white text-3xl lg:text-2xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
+                  className="nav-link text-white text-xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
                >
                   <Translation translationKey="nav.contact" />
                </a>
@@ -63,7 +63,7 @@ export const Navbar = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-10 h-10"
+                        className="w-6 h-6"
                      >
                         <path
                            strokeLinecap="round"
@@ -72,10 +72,7 @@ export const Navbar = () => {
                         />
                      </svg>
                   </button>
-                  <button
-                     className="language-button text-2xl"
-                     onClick={toggleLanguage}
-                  >
+                  <button className="language-button" onClick={toggleLanguage}>
                      {language === 'en' ? 'EN' : 'ES'}
                   </button>
                </div>
@@ -91,7 +88,7 @@ export const Navbar = () => {
                      viewBox="0 0 24 24"
                      strokeWidth={1.5}
                      stroke="currentColor"
-                     className="w-8 h-8"
+                     className="w-6 h-6"
                   >
                      <path
                         strokeLinecap="round"
