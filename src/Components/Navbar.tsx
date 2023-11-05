@@ -7,19 +7,29 @@ import { Link } from 'react-scroll';
 
 export const Navbar = () => {
    const [menuOpen, setMenuOpen] = useState(false);
-   const [linkActive, setLinkAntive] = useState(false);
 
-   const handlerLink = () => setLinkAntive(!linkActive);
    const handlerClick = () => {
       setMenuOpen(!menuOpen);
    };
+
+   const closeMenu = () => setMenuOpen(false);
+
    const { language, toggleLanguage } = useLanguage();
    return (
       <div className="fixed w-full bg-[#05112a] h-14">
          <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between pl-0 pr-0 ">
-            <h2 className="text-[2rem] font-bold z-10 pt-1 pb-1">
-               KevDev<strong>.</strong>
-            </h2>
+            <Link
+               to="hero"
+               spy={true}
+               smooth={true}
+               offset={-200}
+               duration={500}
+            >
+               <h2 className="text-[2rem] font-bold z-10 pt-1 pb-1">
+                  KevDev<strong>.</strong>
+               </h2>
+            </Link>
+
             <div className="lg:hidden overflow-hidden z-10">
                <BurguerButton menuOpen={menuOpen} handlerClick={handlerClick} />
             </div>
@@ -42,7 +52,7 @@ export const Navbar = () => {
                      smooth={true}
                      offset={-200}
                      duration={500}
-                     onClick={handlerLink}
+                     onClick={closeMenu}
                   >
                      <Translation translationKey="nav.home" />
                   </Link>
@@ -53,6 +63,7 @@ export const Navbar = () => {
                      smooth={true}
                      offset={-90}
                      duration={500}
+                     onClick={closeMenu}
                   >
                      <Translation translationKey="nav.about" />
                   </Link>
@@ -63,6 +74,7 @@ export const Navbar = () => {
                      smooth={true}
                      offset={-80}
                      duration={500}
+                     onClick={closeMenu}
                   >
                      <Translation translationKey="nav.projects" />
                   </Link>
@@ -73,6 +85,7 @@ export const Navbar = () => {
                      smooth={true}
                      offset={40}
                      duration={500}
+                     onClick={closeMenu}
                   >
                      <Translation translationKey="nav.contact" />
                   </Link>
