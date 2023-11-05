@@ -145,7 +145,8 @@
 
 .bur.active {
    width: 100%;
-   display: block;
+   display: flex;
+   flex-direction: column;
    position: absolute;
    margin-left: auto;
    margin-right: auto;
@@ -166,7 +167,6 @@
 }
 
 .bg-bur.active {
-   border-radius: 0 0 40% 0;
    top: 0;
    right: 0;
    left: 0;

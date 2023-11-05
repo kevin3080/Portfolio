@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
-import router from './Router';
+import { BrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom';
+
 import './Styles/index.css';
 import { LangageProvider } from './Context/LanguageContext';
+import { App } from './Routes';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <LangageProvider>
-      <RouterProvider router={router} />
-    </LangageProvider>
-  </React.StrictMode>
+   <React.StrictMode>
+      <LangageProvider>
+         <BrowserRouter>
+            <Routes>
+               <Route path="/" element={<App />} />
+            </Routes>
+         </BrowserRouter>
+      </LangageProvider>
+   </React.StrictMode>
 );

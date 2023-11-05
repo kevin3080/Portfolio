@@ -3,6 +3,7 @@ import { useLanguage } from '../Context/LanguageContext';
 import '../Styles/nav.css';
 import { useState } from 'react';
 import { BurguerButton } from './BurguerButton';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
    const [menuOpen, setMenuOpen] = useState(false);
@@ -12,9 +13,9 @@ export const Navbar = () => {
    };
    const { language, toggleLanguage } = useLanguage();
    return (
-      <div className="fixed w-full ">
-         <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between lg:p-4 pl-0 pr-0 bg-[#05112a]">
-            <h2 className="text-[2rem] font-bold z-10">
+      <div className="fixed w-full bg-[#05112a] h-14">
+         <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between pl-0 pr-0 ">
+            <h2 className="text-[2rem] font-bold z-10 pt-1 pb-1">
                KevDev<strong>.</strong>
             </h2>
             <div className="lg:hidden overflow-hidden z-10">
@@ -29,30 +30,18 @@ export const Navbar = () => {
             <div
                className={`absolute lg:static left-[-2000px] ml-auto mr-auto text-center  bur ${
                   menuOpen ? 'active' : ''
-               }`}
+               } gap-y-4`}
             >
-               <a
-                  href=""
-                  className="nav-link text-white text-xl p-3  font-bold block mb-8 lg:inline lg:mr-6"
-               >
+               <a className="nav-link text-white text-xl p-2 pt-1 pb-1   font-bold block lg:inline lg:mr-6">
                   <Translation translationKey="nav.home" />
                </a>
-               <a
-                  href=""
-                  className="nav-link text-white text-xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
-               >
+               <a className="nav-link text-white text-xl p-2 pt-1 pb-1  font-bold block lg:inline lg:mr-6">
                   <Translation translationKey="nav.about" />
                </a>
-               <a
-                  href=""
-                  className="nav-link text-white text-xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
-               >
+               <a className="nav-link text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6">
                   <Translation translationKey="nav.projects" />
                </a>
-               <a
-                  href=""
-                  className="nav-link text-white text-xl p-3 font-bold block mb-8 lg:inline lg:mr-6"
-               >
+               <a className="nav-link text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6">
                   <Translation translationKey="nav.contact" />
                </a>
                <div className="flex justify-center flex-col lg:flex-row lg:hidden ">
