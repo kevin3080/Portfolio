@@ -1,4 +1,4 @@
-import { Abaut } from '../Components/Abaut';
+import { About } from '../Components/About';
 import { Contact } from '../Components/Contact';
 import { Education } from '../Components/Education';
 import { Inicio } from '../Components/Inicio';
@@ -11,7 +11,7 @@ const App = () => {
       <>
          <Navbar />
          <Inicio />
-         <Abaut />
+         <About />
          <Education />
          <Projects />
          <Contact />

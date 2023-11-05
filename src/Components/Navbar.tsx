@@ -3,11 +3,13 @@ import { useLanguage } from '../Context/LanguageContext';
 import '../Styles/nav.css';
 import { useState } from 'react';
 import { BurguerButton } from './BurguerButton';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 export const Navbar = () => {
    const [menuOpen, setMenuOpen] = useState(false);
+   const [linkActive, setLinkAntive] = useState(false);
 
+   const handlerLink = () => setLinkAntive(!linkActive);
    const handlerClick = () => {
       setMenuOpen(!menuOpen);
    };
@@ -32,18 +34,49 @@ export const Navbar = () => {
                   menuOpen ? 'active' : ''
                } gap-y-4`}
             >
-               <a className="nav-link text-white text-xl p-2 pt-1 pb-1   font-bold block lg:inline lg:mr-6">
-                  <Translation translationKey="nav.home" />
-               </a>
-               <a className="nav-link text-white text-xl p-2 pt-1 pb-1  font-bold block lg:inline lg:mr-6">
-                  <Translation translationKey="nav.about" />
-               </a>
-               <a className="nav-link text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6">
-                  <Translation translationKey="nav.projects" />
-               </a>
-               <a className="nav-link text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6">
-                  <Translation translationKey="nav.contact" />
-               </a>
+               <ul className="flex flex-col gap-y-4 lg:flex-row">
+                  <Link
+                     to="hero"
+                     className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
+                     spy={true}
+                     smooth={true}
+                     offset={-200}
+                     duration={500}
+                     onClick={handlerLink}
+                  >
+                     <Translation translationKey="nav.home" />
+                  </Link>
+                  <Link
+                     to="about"
+                     className="text-white text-xl p-2 pt-1 pb-1  font-bold block lg:inline lg:mr-6 nav-link"
+                     spy={true}
+                     smooth={true}
+                     offset={-90}
+                     duration={500}
+                  >
+                     <Translation translationKey="nav.about" />
+                  </Link>
+                  <Link
+                     to="projects"
+                     className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
+                     spy={true}
+                     smooth={true}
+                     offset={-80}
+                     duration={500}
+                  >
+                     <Translation translationKey="nav.projects" />
+                  </Link>
+                  <Link
+                     to="contact"
+                     className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
+                     spy={true}
+                     smooth={true}
+                     offset={40}
+                     duration={500}
+                  >
+                     <Translation translationKey="nav.contact" />
+                  </Link>
+               </ul>
                <div className="flex justify-center flex-col lg:flex-row lg:hidden ">
                   <button className="theme-button flex justify-center">
                      <svg

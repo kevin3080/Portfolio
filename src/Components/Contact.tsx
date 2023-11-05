@@ -1,6 +1,9 @@
 export const Contact = () => {
    return (
-      <section className="h-[100%] bg-[#071739] mt-20 flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center text-[#EBEBEB]">
+      <section
+         id="contact"
+         className="h-[100%] bg-[#071739] mt-20 flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center text-[#EBEBEB]"
+      >
          <section className="mt-32 lg:mb-44">
             <h2 className="text-4xl font-bold">
                Get in Touch<strong className="font-bold">.</strong>
@@ -84,7 +87,7 @@ export const Contact = () => {
                   placeholder="Name"
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none "
                />
-               <label htmlFor="" className="mt-5">
+               <label htmlFor="" className="mt-4">
                   Email:
                </label>
                <input
@@ -92,7 +95,7 @@ export const Contact = () => {
                   placeholder="Email"
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none"
                />
-               <label htmlFor="" className="mt-5">
+               <label htmlFor="" className="mt-4">
                   Message:
                </label>
                <textarea

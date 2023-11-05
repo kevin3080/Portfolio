@@ -1,8 +1,11 @@
 import Translation from '../translate/Translation';
 
-export const Abaut = () => {
+export const About = () => {
    return (
-      <section className="container mt-10 mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%]">
+      <section
+         id="about"
+         className="container  mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%]"
+      >
          <h2 className="text-center text-4xl font-bold">
             <Translation translationKey="about.me" />
             <strong className="font-bold">.</strong>

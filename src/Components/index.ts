@@ -1,4 +1,4 @@
-export * from './Abaut';
+export * from './About';
 export * from './BurguerButton';
 export * from './Contact';
 export * from './Education';

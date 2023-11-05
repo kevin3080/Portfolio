@@ -3,7 +3,10 @@ import Translation from '../translate/Translation';
 
 export const Inicio = () => {
    return (
-      <section className="container mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%] gap-x-2">
+      <section
+         id="hero"
+         className="container mb-10 mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%] gap-x-2"
+      >
          <section className="w-[55%] mt-8 lg:mt-0 flex flex-col items-center lg:items-start ">
             <div className=" sm:w-auto text-center lg:text-left">
                <p className="text-2xl lg:text-3xl">

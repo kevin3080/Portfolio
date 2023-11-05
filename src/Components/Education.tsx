@@ -1,6 +1,9 @@
 export const Education = () => {
    return (
-      <section className="container mx-auto  w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%] mt-5">
+      <section
+         id="about"
+         className="container mx-auto  w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%] mt-5"
+      >
          <div className="flex items-center flex-col">
             <div>
                <h3 className="text-2xl ">Education:</h3>
