@@ -18,7 +18,7 @@ export const Inicio = () => {
                <p className="text-2xl lg:text-3xl whitespace-nowrap">
                   <Translation translationKey="inicio.hi" />
                </p>
-               <div className="h-[5rem] w-[14rem] sm:h-auto sm:w-auto">
+               <div className="h-[5rem] w-[17rem] sm:h-auto sm:w-auto">
                   {language === 'en' ? (
                      <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces ">
                         <Typewriter
@@ -54,7 +54,7 @@ export const Inicio = () => {
                   )}
                </div>
 
-               <p className="text-2xl lg:text-3xl whitespace-break-spaces w-[14rem] sm:w-[29rem] lg:w-auto ">
+               <p className="text-2xl lg:text-3xl whitespace-break-spaces w-[17rem] sm:w-[29rem] lg:w-auto ">
                   <Translation translationKey="inicio.p" />
                </p>
             </div>
