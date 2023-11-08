@@ -13,13 +13,13 @@ export const Inicio = () => {
          id="hero"
          className="container mb-10 mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%] gap-x-2"
       >
-         <section className="w-[55%] mt-8 lg:mt-0 flex flex-col items-center lg:items-start ">
+         <section className="w-[55%] mt-8 lg:mt-0 flex flex-col items-center lg:items-start  ">
             <div className=" sm:w-auto text-center lg:text-left">
-               <p className="text-2xl lg:text-3xl">
+               <p className="text-2xl lg:text-3xl whitespace-nowrap">
                   <Translation translationKey="inicio.hi" />
                </p>
                {language === 'en' ? (
-                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-nowrap lg:whitespace-break-spaces">
+                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces h-[2.3em] lg:h-[auto]">
                      <Typewriter
                         options={{
                            strings: [
@@ -35,7 +35,7 @@ export const Inicio = () => {
                      />
                   </h1>
                ) : (
-                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-nowrap lg:whitespace-break-spaces">
+                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces h-[2.3em] lg:h-[auto]">
                      <Typewriter
                         options={{
                            strings: [
@@ -52,7 +52,7 @@ export const Inicio = () => {
                   </h1>
                )}
 
-               <p className="text-2xl lg:text-3xl whitespace-nowrap lg:whitespace-break-spaces">
+               <p className="text-2xl lg:text-3xl whitespace-break-spaces">
                   <Translation translationKey="inicio.p" />
                </p>
             </div>
@@ -98,7 +98,7 @@ export const Inicio = () => {
                </button>
             </div>
          </section>
-         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-95 lg:h-95 rounded-3xl overflow-hidden">
+         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-95 lg:h-95 rounded-3xl overflow-hidden mt-[3rem] lg:mt-0">
             <img src={autor} alt="" className="object-cover h-full w-full" />
          </div>
       </section>
