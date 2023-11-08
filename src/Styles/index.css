@@ -4,46 +4,46 @@
 @tailwind utilities;
 
 * {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+   box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
 }
 body {
-  background-color: #05112a;
-  color: white;
+   background-color: #05112a;
+   color: white;
 }
 
-h1 span {
-  font-weight: bold;
+h1 div span {
+   font-weight: bold;
 }
 
 .btn-resume {
-  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out,
-    color 0.1s ease-in-out;
+   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out,
+      color 0.1s ease-in-out;
 }
 
 .btn-resume:hover {
-  background-color: #0090ff;
-  border-color: #0090ff;
-  color: white;
+   background-color: #0090ff;
+   border-color: #0090ff;
+   color: white;
 }
 
 .btn-portfolio {
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
-    color 0.2s ease-in-out;
+   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
 }
 .btn-portfolio:hover {
-  background-color: transparent;
-  border-color: #0090ff;
-  color: #0090ff;
+   background-color: transparent;
+   border-color: #0090ff;
+   color: #0090ff;
 }
 
 h2 span {
-  font-weight: bold;
+   font-weight: bold;
 }
 
 h2 strong {
-  color: #0090ff;
+   color: #0090ff;
 }

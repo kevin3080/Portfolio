@@ -1,17 +1,19 @@
 {
-  "nav.home": "Inicio",
-  "nav.about": "Sobre mí",
-  "nav.projects": "Proyectos",
-  "nav.contact": "Contacto",
+   "nav.home": "Inicio",
+   "nav.about": "Sobre mí",
+   "nav.projects": "Proyectos",
+   "nav.contact": "Contacto",
 
-  "inicio.hi": "Hola, soy Kevin 👋",
-  "inicio.prof": "Desarrollador Frontend",
-  "inicio.p": "me encanta crear aplicaciones web.",
-  "inicio.resume": "Curriculum",
-  "inicio.portfolio": "Portafolio",
+   "inicio.hi": "Hola, soy Kevin 👋",
+   "inicio.prof": "Desarrollador Frontend",
+   "inicio.prof1": "Desarrollador Movil",
+   "inicio.prof2": "Desarrollador Backend",
+   "inicio.p": "me encanta crear aplicaciones web.",
+   "inicio.resume": "Curriculum",
+   "inicio.portfolio": "Portafolio",
 
-  "about.me": "Sobre mí",
-  "about.p1": "Soy un apasionado programador, caracterizado por mi creatividad y persistencia.",
-  "about.p2": "Disfruto resolviendo problemas y diseñando soluciones innovadoras. El aprendizaje",
-  "about.p3": "continuo y la colaboración en equipo son fuentes constantes de satisfacción para mí, y siempre persigo la excelencia en mis proyectos."
+   "about.me": "Sobre mí",
+   "about.p1": "Soy un apasionado programador, caracterizado por mi creatividad y persistencia.",
+   "about.p2": "Disfruto resolviendo problemas y diseñando soluciones innovadoras. El aprendizaje",
+   "about.p3": "continuo y la colaboración en equipo son fuentes constantes de satisfacción para mí, y siempre persigo la excelencia en mis proyectos."
 }

@@ -1,7 +1,13 @@
+import { useLanguage } from '../Context/LanguageContext';
 import autor from '../assets/imagen-mia.jpeg';
 import Translation from '../translate/Translation';
+import Typewriter from 'typewriter-effect';
+import es from '../translate/es.json';
+import en from '../translate/en.json';
 
 export const Inicio = () => {
+   const { language } = useLanguage();
+
    return (
       <section
          id="hero"
@@ -12,10 +18,41 @@ export const Inicio = () => {
                <p className="text-2xl lg:text-3xl">
                   <Translation translationKey="inicio.hi" />
                </p>
-               <h1 className="text-4xl lg:text-5xl text-corp">
-                  <Translation translationKey="inicio.prof" />
-               </h1>
-               <p className="text-2xl lg:text-3xl">
+               {language === 'en' ? (
+                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-nowrap lg:whitespace-break-spaces">
+                     <Typewriter
+                        options={{
+                           strings: [
+                              en['inicio.prof'],
+                              en['inicio.prof1'],
+                              en['inicio.prof2'],
+                           ],
+                           autoStart: true,
+                           loop: true,
+                           delay: 32,
+                           deleteSpeed: 32,
+                        }}
+                     />
+                  </h1>
+               ) : (
+                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-nowrap lg:whitespace-break-spaces">
+                     <Typewriter
+                        options={{
+                           strings: [
+                              es['inicio.prof'],
+                              es['inicio.prof1'],
+                              es['inicio.prof2'],
+                           ],
+                           autoStart: true,
+                           loop: true,
+                           delay: 32,
+                           deleteSpeed: 32,
+                        }}
+                     />
+                  </h1>
+               )}
+
+               <p className="text-2xl lg:text-3xl whitespace-nowrap lg:whitespace-break-spaces">
                   <Translation translationKey="inicio.p" />
                </p>
             </div>
