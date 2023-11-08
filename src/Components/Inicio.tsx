@@ -18,41 +18,43 @@ export const Inicio = () => {
                <p className="text-2xl lg:text-3xl whitespace-nowrap">
                   <Translation translationKey="inicio.hi" />
                </p>
-               {language === 'en' ? (
-                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces h-[2.3em] lg:h-[auto]">
-                     <Typewriter
-                        options={{
-                           strings: [
-                              en['inicio.prof'],
-                              en['inicio.prof1'],
-                              en['inicio.prof2'],
-                           ],
-                           autoStart: true,
-                           loop: true,
-                           delay: 32,
-                           deleteSpeed: 32,
-                        }}
-                     />
-                  </h1>
-               ) : (
-                  <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces h-[2.3em] lg:h-[auto]">
-                     <Typewriter
-                        options={{
-                           strings: [
-                              es['inicio.prof'],
-                              es['inicio.prof1'],
-                              es['inicio.prof2'],
-                           ],
-                           autoStart: true,
-                           loop: true,
-                           delay: 32,
-                           deleteSpeed: 32,
-                        }}
-                     />
-                  </h1>
-               )}
+               <div className="h-[5rem] w-[14rem] sm:h-auto sm:w-auto">
+                  {language === 'en' ? (
+                     <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces ">
+                        <Typewriter
+                           options={{
+                              strings: [
+                                 en['inicio.prof'],
+                                 en['inicio.prof1'],
+                                 en['inicio.prof2'],
+                              ],
+                              autoStart: true,
+                              loop: true,
+                              delay: 32,
+                              deleteSpeed: 32,
+                           }}
+                        />
+                     </h1>
+                  ) : (
+                     <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces">
+                        <Typewriter
+                           options={{
+                              strings: [
+                                 es['inicio.prof'],
+                                 es['inicio.prof1'],
+                                 es['inicio.prof2'],
+                              ],
+                              autoStart: true,
+                              loop: true,
+                              delay: 32,
+                              deleteSpeed: 32,
+                           }}
+                        />
+                     </h1>
+                  )}
+               </div>
 
-               <p className="text-2xl lg:text-3xl whitespace-break-spaces">
+               <p className="text-2xl lg:text-3xl whitespace-break-spaces w-[14rem] sm:w-[29rem] lg:w-auto ">
                   <Translation translationKey="inicio.p" />
                </p>
             </div>
@@ -98,7 +100,7 @@ export const Inicio = () => {
                </button>
             </div>
          </section>
-         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-95 lg:h-95 rounded-3xl overflow-hidden mt-[3rem] lg:mt-0">
+         <div className="w-60 h-60 md:w-80 md:h-80 lg:w-95 lg:h-95 rounded-3xl overflow-hidden mt-[3rem] lg:mt-0 ">
             <img src={autor} alt="" className="object-cover h-full w-full" />
          </div>
       </section>
