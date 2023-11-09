@@ -13,20 +13,20 @@ export const Projects: React.FC = () => {
                can <span className="text-corp">program.</span>
             </p>
          </section>
-         <section className="flex justify-center flex-col flex-wrap w-[20%] md:w-[100%] lg:flex-row mt-11">
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6 bg-corp hover:bg-transparent ml-20 lg:ml-0 border rounded-md border-corp">
+         <section className="flex justify-center flex-col gap-5 lg:gap-0  w-[100%] md:w-[100%]  md:flex-row mt-11">
+            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6 bg-corp hover:bg-transparent  lg:ml-0 border rounded-md border-corp">
                Todos
             </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent ml-20 border rounded-md border-corp">
-               Vanilla JS
+            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
+               Web
             </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent ml-20 border rounded-md border-corp">
+            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
                Movil
             </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent ml-20 border rounded-md border-corp">
+            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
                React
             </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent ml-20 border rounded-md border-corp">
+            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
                Frameworks
             </button>
          </section>
