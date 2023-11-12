@@ -40,6 +40,7 @@ export const Contact = () => {
             console.log(response);
             toast.success('Message sent successfully! 🤩', {
                position: toast.POSITION.BOTTOM_RIGHT,
+               autoClose: 1500,
             });
             setFormData({
                user_name: '',
