@@ -37,8 +37,9 @@ export const Projects: React.FC = () => {
             <button
                id="btnProjects"
                onClick={handlerClick}
-               className={` flex items-center justify-center w-full`}
+               className={` flex items-center justify-between w-full`}
             >
+               <div className="invisible pl-14"></div>
                {selectedCategory}
                <BurguerButtonTwo
                   menuOpen={menuOpen}
@@ -47,14 +48,14 @@ export const Projects: React.FC = () => {
             </button>
          </div>
          {menuOpen && (
-            <section className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%] flex flex-col">
+            <section className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%] flex flex-col justify-center">
                {categories
                   .filter(category => category !== selectedCategory) // Filtra la categoría seleccionada
                   .map((category, index) => (
                      <button
                         key={index}
                         onClick={() => handleCategoryClick(category)}
-                        className={`btn-portfolio pt-1 pb-1 pl-6 pr-20 bg-corp hover:bg-transparent ${
+                        className={`btn-portfolio pt-1 pb-1  bg-corp hover:bg-transparent ${
                            index === 0 ? 'lg:ml-0' : 'lg:ml-20'
                         } border border-corp`}
                      >
