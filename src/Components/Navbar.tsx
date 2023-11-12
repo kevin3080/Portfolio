@@ -19,18 +19,19 @@ export const Navbar = () => {
       <div className="fixed w-full bg-[#05112a] h-14">
          <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between pl-0 pr-0 ">
             <Link
+               className="z-20"
                to="hero"
                spy={true}
                smooth={true}
                offset={-200}
                duration={500}
             >
-               <h2 className="text-[2rem] font-bold z-10 pt-1 pb-1">
+               <h2 className="text-[2rem] font-bold  pt-1 pb-1">
                   KevDev<strong>.</strong>
                </h2>
             </Link>
 
-            <div className="lg:hidden overflow-hidden z-10">
+            <div className="lg:hidden overflow-hidden z-20">
                <BurguerButton menuOpen={menuOpen} handlerClick={handlerClick} />
             </div>
 

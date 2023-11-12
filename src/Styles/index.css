@@ -34,10 +34,51 @@ h1 div span {
    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
       color 0.2s ease-in-out;
 }
-.btn-portfolio:hover {
+.btn-portfolio.active {
    background-color: transparent;
    border-color: #0090ff;
    color: #0090ff;
+}
+
+.ham {
+   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+   transition: transform 400ms;
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.hamRotate.active {
+   transform: rotate(45deg);
+   z-index: -1;
+}
+
+.lineSection {
+   fill: none;
+   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+   stroke: white;
+   stroke-width: 4.5;
+   stroke-linecap: round;
+}
+
+.hamSection .top {
+   stroke-dasharray: 40 121;
+}
+.hamSection .bottom {
+   stroke-dasharray: 40 121;
+}
+.hamSection.active .top {
+   stroke: #0090ff;
+   stroke-dashoffset: -68px;
+}
+.hamSection.active .middle {
+   stroke: #0090ff;
+}
+.hamSection.active .bottom {
+   stroke: #0090ff;
+   stroke-dashoffset: -68px;
 }
 
 h2 span {
