@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                <ul className="flex flex-wrap">
                   {technology.map((tech, index) => (
                      <li className="pr-2 text-gray-400" key={index}>
-                        {`#${tech}`}
+                        {`- ${tech}`}
                      </li>
                   ))}
                </ul>

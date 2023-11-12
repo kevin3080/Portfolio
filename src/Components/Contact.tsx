@@ -1,4 +1,63 @@
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const Contact = () => {
+   const [formData, setFormData] = useState({
+      user_name: '',
+      user_email: '',
+      message: '',
+   });
+
+   const handleChange = (e: any) => {
+      setFormData({
+         ...formData,
+         [e.target.name]: e.target.value,
+      });
+   };
+
+   const sendEmail = (event: React.FormEvent) => {
+      event.preventDefault();
+      const serviceId = import.meta.env.VITE_SERVICE_ID;
+      const templateId = import.meta.env.VITE_TEMPLATE_ID;
+      const apiKey = import.meta.env.VITE_API_KEY;
+
+      if (!serviceId || !templateId || !apiKey) {
+         console.error('One or more environment variables are missing.');
+         return;
+      }
+      /*  setLoading(true); // Activar el indicador de carga
+       */
+      emailjs
+         .sendForm(
+            serviceId,
+            templateId,
+            event.target as HTMLFormElement,
+            apiKey
+         )
+         .then(response => {
+            console.log(response);
+            toast.success('Message sent successfully! 🤩', {
+               position: toast.POSITION.BOTTOM_RIGHT,
+            });
+            setFormData({
+               user_name: '',
+               user_email: '',
+               message: '',
+            });
+         })
+         .catch(error => {
+            console.log(error);
+            toast.error('Error sending message. Please try again. 😨🥺', {
+               position: toast.POSITION.BOTTOM_RIGHT,
+            });
+         });
+      /*       .finally(() => {
+            setLoading(false); // Desactivar el indicador de carga después de la promesa
+         }); */
+   };
+
    return (
       <section
          id="contact"
@@ -80,37 +139,47 @@ export const Contact = () => {
             </div>
          </section>
          <section className="border bg-[#05112A] border-[#05112A] rounded-3xl w-[90%] lg:w-[30%] min-h-min lg:mt-32 mb-44">
-            <form action="" className="p-10 flex flex-col gap-2">
-               <label htmlFor="">Name:</label>
+            <form
+               action=""
+               onSubmit={sendEmail}
+               className="p-10 flex flex-col gap-2"
+            >
+               <label htmlFor="user_name">Name:</label>
                <input
                   type="text"
+                  name="user_name"
+                  onChange={handleChange}
+                  value={formData.user_name}
                   placeholder="Name"
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none "
                />
-               <label htmlFor="" className="mt-4">
+               <label htmlFor="user_email" className="mt-4">
                   Email:
                </label>
                <input
                   type="email"
+                  name="user_email"
+                  onChange={handleChange}
+                  value={formData.user_email}
                   placeholder="Email"
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none"
                />
-               <label htmlFor="" className="mt-4">
+               <label htmlFor="message" className="mt-4">
                   Message:
                </label>
                <textarea
-                  name=""
+                  name="message"
+                  onChange={handleChange}
+                  value={formData.message}
                   id=""
                   placeholder="Message"
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none resize-none h-[15rem]"
                ></textarea>
-               <button
-                  type="submit"
-                  className="btn-portfolio border border-corp bg-corp p-2 rounded-md mt-3 font-medium"
-               >
+               <button className="btn-portfolio border border-corp bg-corp p-2 rounded-md mt-3 font-medium">
                   Send
                </button>
             </form>
+            <ToastContainer />
          </section>
       </section>
    );

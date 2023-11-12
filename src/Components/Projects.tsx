@@ -15,8 +15,41 @@ export const Projects: React.FC = () => {
       setSelectedCategory(category);
       setMenuOpen(false); // Cerrar el menú cuando se selecciona una categoría
    };
-   const categories = ['Todos', 'Web', 'Movil', 'React', 'Frameworks'];
-
+   const categories = ['Todos', 'Web', 'Movil', 'Backend'];
+   const filteredProjects = projectsData.filter(project => {
+      if (selectedCategory === 'Todos') {
+         return true; // Mostrar todos los proyectos si la categoría es "Todos"
+      } else if (selectedCategory === 'Web') {
+         // Filtrar proyectos relacionados con tecnologías web
+         return project.technology.some(
+            tech =>
+               tech === 'React' ||
+               tech === 'Angular' ||
+               tech === 'Vite' ||
+               tech === 'Next.js' // Agrega otras tecnologías web según sea necesario
+         );
+      } else if (selectedCategory === 'Movil') {
+         // Filtrar proyectos relacionados con tecnologías móviles
+         return project.technology.some(
+            tech =>
+               tech === 'React Native' ||
+               tech === 'Flutter' ||
+               tech === 'Kotlin' // Agrega otras tecnologías móviles según sea necesario
+         );
+      } else if (selectedCategory === 'Backend') {
+         // Filtrar proyectos relacionados con tecnologías móviles
+         return project.technology.some(
+            tech =>
+               tech === 'Java' ||
+               tech === 'Spring Boot' ||
+               tech === '.net' ||
+               tech === 'C#' ||
+               tech === 'Express' ||
+               tech === 'NestJS'
+         );
+      }
+      return false; // Por defecto, no mostrar nada si no hay coincidencia con las categorías anteriores
+   });
    return (
       <section id="projects" className="mt-5 ">
          <section>
@@ -64,25 +97,24 @@ export const Projects: React.FC = () => {
                   ))}
             </section>
          )}
+
          <section className="hidden lg:flex justify-center flex-col gap-5 lg:gap-0  w-[100%] md:w-[100%]  md:flex-row mt-11">
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6 bg-corp hover:bg-transparent  lg:ml-0 border rounded-md border-corp">
-               Todos
-            </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
-               Web
-            </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
-               Movil
-            </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
-               React
-            </button>
-            <button className="btn-portfolio pt-1 pb-1 pl-6 pr-6  bg-corp hover:bg-transparent lg:ml-20 border rounded-md border-corp">
-               Frameworks
-            </button>
+            {categories
+               .filter(category => category)
+               .map((category, index) => (
+                  <button
+                     key={index}
+                     onClick={() => handleCategoryClick(category)}
+                     className={`btn-portfolio pt-1 pb-1 pl-9 pr-9 rounded-md bg-corp hover:bg-transparent ${
+                        index === 0 ? 'lg:ml-0' : 'lg:ml-20'
+                     } border border-corp `}
+                  >
+                     {category}
+                  </button>
+               ))}
          </section>
          <section className="flex flex-wrap justify-center mt-9 container mx-auto w-[10%] md:w-[80%] sm:w-[90%] lg:w-[80%]">
-            {projectsData.map(project => (
+            {filteredProjects.map(project => (
                <ProjectCard key={project.id} project={project} />
             ))}
          </section>
