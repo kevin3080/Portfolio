@@ -4,6 +4,7 @@ import Translation from '../translate/Translation';
 import Typewriter from 'typewriter-effect';
 import es from '../translate/es.json';
 import en from '../translate/en.json';
+import { Link } from 'react-scroll';
 
 export const Inicio = () => {
    const { language } = useLanguage();
@@ -60,43 +61,59 @@ export const Inicio = () => {
             </div>
 
             <div className="flex mt-8">
-               <button className="btn-resume w-30 flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1">
-                  <p className="">
-                     <Translation translationKey="inicio.resume" />
-                  </p>
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     strokeWidth="1.5"
-                     stroke="currentColor"
-                     className="w-5 h-5"
+               <button className=" w-30 ">
+                  <a
+                     href="https://drive.usercontent.google.com/download?id=19vR-KEsOa2cvALlLuiHQ9LVZ2N6JhMEr&export=download&authuser=0&confirm=t&uuid=780fe169-31a9-4b48-bcd9-958e81141470&at=APZUnTU7N7_Z3azxeK3QmqUOVuFh:1699931743240"
+                     download={'resume'}
+                     title="descargar resume"
+                     className="btn-resume flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1"
                   >
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                     />
-                  </svg>
+                     <p className="">
+                        <Translation translationKey="inicio.resume" />
+                     </p>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                     >
+                        <path
+                           strokeLinecap="round"
+                           strokeLinejoin="round"
+                           d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                        />
+                     </svg>
+                  </a>
                </button>
-               <button className="btn-portfolio w-30 flex items-center ml-4 bg-corp border border-corp rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1 ">
-                  <p className="">
-                     <Translation translationKey="inicio.portfolio" />
-                  </p>
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     strokeWidth="1.5"
-                     stroke="currentColor"
-                     className="w-5 h-5"
+               <button className=" w-30">
+                  <Link
+                     to="projects"
+                     spy={true}
+                     smooth={true}
+                     offset={-80}
+                     duration={500}
+                     className="btn-portfolio flex items-center ml-4 bg-corp border border-corp rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1"
                   >
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                     />
-                  </svg>
+                     <p className="">
+                        <Translation translationKey="inicio.portfolio" />
+                     </p>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                     >
+                        <path
+                           strokeLinecap="round"
+                           strokeLinejoin="round"
+                           d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                        />
+                     </svg>
+                  </Link>
                </button>
             </div>
          </section>
