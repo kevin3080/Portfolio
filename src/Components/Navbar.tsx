@@ -73,7 +73,7 @@ export const Navbar = () => {
                      className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
                      spy={true}
                      smooth={true}
-                     offset={-80}
+                     offset={-70}
                      duration={500}
                      onClick={closeMenu}
                   >
@@ -84,7 +84,7 @@ export const Navbar = () => {
                      className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
                      spy={true}
                      smooth={true}
-                     offset={40}
+                     offset={60}
                      duration={500}
                      onClick={closeMenu}
                   >

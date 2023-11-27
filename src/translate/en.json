@@ -15,5 +15,25 @@
    "about.me": "About me",
    "about.p1": "I am a passionate, creative and persistent programmer. I enjoy solving problems and crafting",
    "about.p2": "innovative solutions. Continuous learning and teamwork bring me satisfaction, and I always",
-   "about.p3": "strive for excellence in my projects."
+   "about.p3": "strive for excellence in my projects.",
+   "about.tech": "Tech Stack:",
+
+   "about.education": "Education:",
+   "education.courseReact": "React: from zero to expert ( Hooks y MERN )",
+   "education.courseReact.date": "2022 - Present",
+
+   "education.courseNext": "Next.js: The React framework for production",
+   "education.courseNext.date": "2022 - Present",
+
+   "education.courseJava": "Java University - Zero to Expert - More Complete +106 hrs.",
+   "education.courseJava.date": "2022 - Present",
+
+   "education.courseReactNative": "React Native: Native Apps for iOS and Android",
+   "education.courseReactNative.date": "2022 - Present",
+
+   "education.courseNest": "Nest Scalable backend development with Node",
+   "education.courseNest.date": "2022 - Present",
+
+   "Projects": "Projects",
+   "Projects.p": "Anything you can imagine, you can program."
 }
