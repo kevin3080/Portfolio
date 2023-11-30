@@ -44,6 +44,8 @@ Aunque aún se encuentra en construcción, mi portfolio ya refleja mi dedicació
 
 ## Próximos Pasos
 - Mejorar la sección de proyectos agregando un modal para dar mas detalles de los proyectos.
+- Trabajar en un diseño atractivo para mostrar las imagenes de mis proyectos.
+- Agregar Proyectos realizados.
 - Agregar tema ligth.
 - completar las traducciones.
 
