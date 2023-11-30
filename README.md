@@ -7,8 +7,8 @@
 El proyecto está organizado de la siguiente manera:
 
 - **src**: Directorio principal que contiene el código fuente del proyecto.
-  -- **assets**: Carpeta que almacena recursos multimedia y archivos estáticos.
-  -- **components**: Componentes reutilizables utilizados en la aplicación.
+  - **assets**: Carpeta que almacena recursos multimedia y archivos estáticos.
+  - **components**: Componentes reutilizables utilizados en la aplicación.
   - **Context**: Contextos de React para la gestión del estado.
   - **data**: Datos estáticos o archivos de configuración.
   - **Routes**: Configuración y definición de rutas de la aplicación.
