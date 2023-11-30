@@ -6,6 +6,7 @@
 Este proyecto ha sido construido utilizando las siguientes tecnologías:
 
 - **React**: Biblioteca JavaScript para construir interfaces de usuario interactivas.
+- **TypeScript**: Superset de JavaScript que agrega tipado estático opcional.
 - **Vite**: Herramienta de construcción rápida para proyectos web modernos en JavaScript.
 - **Tailwind CSS**: Marco de diseño utilitario de bajo nivel para construir rápidamente interfaces de usuario elegantes.
 - **EmailJS**: Servicio que facilita el envío de correos electrónicos directamente desde el navegador.
