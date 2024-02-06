@@ -1,4 +1,5 @@
 import courses from '../data/courses';
+import Translation from '../translate/Translation';
 import { BurguerButtonTwo } from './BurguerButtonTwo';
 import { useState } from 'react';
 
@@ -49,61 +50,60 @@ export const Education = () => {
                </section>
             )}
             <div className="hidden lg:block">
-               <h3 className="text-2xl ">Education:</h3>
+               <h3 className="text-2xl "><Translation translationKey="about.education" /></h3>
                <section className="grid grid-cols-1  sm:grid-cols-1 md:grid-cols-2 gap-1 ">
                   <section className="m-3">
                      <h3 className="">
-                        React: De cero a experto ( Hooks y MERN )
+                        <Translation translationKey="education.courseReact" />
                      </h3>
                      <ul>
                         <li className="text-sm italic font-light">Udemy</li>
                         <li className="text-sm italic font-light">
-                           2022 - Present
+                           <Translation style='font-light' translationKey="education.courseReact.date" />
                         </li>
                      </ul>
                   </section>
                   <section className="m-2">
                      <h3 className="">
-                        React Native: Aplicaciones nativas para iOS y Android
+                        <Translation translationKey="education.courseReactNative" />
                      </h3>
                      <ul>
                         <li className="text-sm italic font-light">Udemy</li>
-                        <li className="text-sm italic font-light">
-                           2022 - Present
+                        <li className="text-sm italic ">
+                           <Translation style='font-light' translationKey="education.courseReactNative.date" />
                         </li>
                      </ul>
                   </section>
                   <section className="m-2">
                      <h3 className="">
-                        Next.js: El framework de React para producción
+                        <Translation translationKey="education.courseNext" />
                      </h3>
                      <ul>
                         <li className="text-sm italic font-light">Udemy</li>
-                        <li className="text-sm italic font-light">
-                           2022 - Present
+                        <li className="text-sm italic">
+                           <Translation style='font-light' translationKey="education.courseNext.date" />
                         </li>
                      </ul>
                   </section>
                   <section className="m-2">
                      <h3 className="">
-                        Nest Desarrollo backend escalable con Node
+                        <Translation translationKey="education.courseNest" />
                      </h3>
                      <ul>
                         <li className="text-sm italic font-light">Udemy</li>
-                        <li className="text-sm italic font-light">
-                           2022 - Present
+                        <li className="text-sm italic">
+                           <Translation style='font-light' translationKey="education.courseNest.date" />
                         </li>
                      </ul>
                   </section>
                   <section className="m-2">
                      <h3 className="">
-                        Java University - Zero to Expert - More Complete +106
-                        hrs.
+                        <Translation translationKey="education.courseJava"/>
                      </h3>
                      <ul>
                         <li className="text-sm italic font-light">Udemy</li>
                         <li className="text-sm italic font-light">
-                           2022 - Present
+                           <Translation style='font-light' translationKey="education.courseJava.date" />
                         </li>
                      </ul>
                   </section>

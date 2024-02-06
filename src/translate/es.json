@@ -23,10 +23,10 @@
    "education.courseReact.date": "2022 - Presente",
 
    "education.courseNext": "Next.js: El framework de React para producción",
-   "education.courseNext.date": "2022 - Presente",
+   "education.courseNext.date": "2023 - Presente",
 
    "education.courseJava": "Universidad Java - De Cero a Experto - Más Completo +106 hrs.",
-   "education.courseJava.date": "2022 - Presente",
+   "education.courseJava.date": "2023 - Presente",
 
    "education.courseReactNative": "React Native: Aplicaciones nativas para iOS y Android",
    "education.courseReactNative.date": "2022 - Presente",
@@ -35,5 +35,25 @@
    "education.courseNest.date": "2022 - Presente",
 
    "Projects": "Proyectos",
-   "Projects.p": "Todo lo que puedas imaginar lo puedes programar."
+   "Projects.p": "Todo lo que puedas",
+   "Projects.pspan": "imaginar",
+   "Projects.pnext": ", Lo puedes",
+   "Projects.pspan2": "programar.",
+
+   "contact": "Contactame",
+   "contact.p": "no seas tímido, déjame un mensaje :)",
+   "nameForm": "Nombre:",
+   "emailForm": "Correo:",
+   "messageForm": "Mensaje:",
+   "btnSubmit": "Enviar",
+
+   "footer.description": "Hecho con ❤️ por ",
+   "footer.copyright": "Copyright © 2023 Kevin Portfolio. Todos los derechos reservados.",
+
+
+   "ProyectAdviceApp": "App de consejos",
+   "ProyectAdviceAppD": "Una aplicacion que da consejos aleatorios en ingles, Construida con React y sass"
+
+
+
 }

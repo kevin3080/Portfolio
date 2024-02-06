@@ -27,7 +27,7 @@ export const About = () => {
          <section className=" flex flex-col items-center">
             <section className=" mt-4 w-[90%] md:w-[80%] sm:w-[90%] lg:w-[70%]">
                <h3 className="text-left font-bold text-2xl ">
-                  Mis Habilidades Tech:
+                  <Translation translationKey="about.tech" />
                </h3>
                {/* <ul className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-2"> */}
                <ul className="mt-3 grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5">

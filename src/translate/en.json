@@ -23,10 +23,10 @@
    "education.courseReact.date": "2022 - Present",
 
    "education.courseNext": "Next.js: The React framework for production",
-   "education.courseNext.date": "2022 - Present",
+   "education.courseNext.date": "2023 - Present",
 
    "education.courseJava": "Java University - Zero to Expert - More Complete +106 hrs.",
-   "education.courseJava.date": "2022 - Present",
+   "education.courseJava.date": "2023 - Present",
 
    "education.courseReactNative": "React Native: Native Apps for iOS and Android",
    "education.courseReactNative.date": "2022 - Present",
@@ -35,5 +35,20 @@
    "education.courseNest.date": "2022 - Present",
 
    "Projects": "Projects",
-   "Projects.p": "Anything you can imagine, you can program."
+   "Projects.p": "Anything you can",
+   "Projects.pspan": "imagine",
+   "Projects.pnext": ", you can",
+   "Projects.pspan2": "program.",
+
+
+   "contact": "Get in Touch",
+   "contact.p": "don't be shy, and leave me a message :)",
+   "nameForm": "Name:",
+   "emailForm": "Email:",
+   "messageForm": "Message:",
+   "btnSubmit": "Send",
+
+   "footer.description": "Made with ❤️ by ",
+   "footer.copyright": "Copyright © 2023 Kevin Portfolio. All rights reserved."
+   
 }

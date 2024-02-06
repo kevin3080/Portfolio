@@ -21,6 +21,7 @@ export interface LanguageProviderProps {
 
 export interface TranslationProps {
    translationKey: string;
+   style?: string
 }
 
 export interface Translations {

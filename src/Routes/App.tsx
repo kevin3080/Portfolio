@@ -12,11 +12,12 @@ const App = () => {
 
    const [isModalOpen, setModalOpen] = useState(true);
 
+
     // Cierra la modal después de un tiempo o en respuesta a alguna acción
   useEffect(() => {
    const timeout = setTimeout(() => {
      setModalOpen(false);
-   }, 6000); // Cierra la modal después de 5 segundos
+   }, 8000); // Cierra la modal después de 5 segundos
 
    return () => clearTimeout(timeout);
  }, []);
@@ -34,7 +35,8 @@ const App = () => {
            backgroundColor: 'rgba(0, 0, 0, 0.5)',
          },
          content: {
-           
+           borderRadius: '40px',
+           border: 0,
            minHeight: '50%',
            margin: 'auto',
            display: 'flex',
@@ -48,15 +50,14 @@ const App = () => {
        }}
       >
       
-            <h2 className='text-2xl font-bold'>Bienvenido a mi sitio web</h2>
-            <p>¡Gracias por visitar! Este sitio aun sigue en <span className='font-bold'>construccion...</span></p>
-            <h3 className='text-xl font-bold'>Próximos Pasos:</h3>
-            <ul className='list-disc pl-5'>
-               <li>Mejorar la sección de proyectos agregando un modal para dar mas detalles de los proyectos.</li>
-               <li>Trabajar en un diseño atractivo para mostrar las imagenes de mis proyectos.</li>
-               <li>Agregar Proyectos realizados.</li>
-               <li>Agregar tema ligth.</li>
-               <li>completar las traducciones.</li>
+            <h2 className='text-2xl font-bold'>Welcome to my website</h2>
+            <p>Thanks for visiting! This site is still under <span className='font-bold'>construccion...</span></p>
+            <h3 className='text-xl font-bold mt-5'>Next Steps:</h3>
+            <ul className='list-disc pl-5 pt-5'>
+               <li>Improve the projects section by adding a modal to give more details of the projects.</li>
+               <li>Work on an attractive design to show the images of my projects.</li>
+               <li>Add completed projects.</li>
+               <li>Add light theme.</li>
             </ul>
             <div className='flex justify-center mt-5'>
                <button className='btn-portfolio flex items-center ml-4 bg-corp border border-corp rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1' onClick={() => setModalOpen(false)}>Cerrar</button>

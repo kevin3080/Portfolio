@@ -2,7 +2,13 @@ import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Translation from '../translate/Translation';
+import { useLanguage } from '../Context/LanguageContext';
 
+
+interface HandleChange {
+   target: { name: string; value: string };
+}
 export const Contact = () => {
    const [formData, setFormData] = useState({
       user_name: '',
@@ -10,12 +16,19 @@ export const Contact = () => {
       message: '',
    });
 
-   const handleChange = (e: any) => {
+   const handleChange = (e: HandleChange ) => {
       setFormData({
          ...formData,
          [e.target.name]: e.target.value,
       });
    };
+
+   const {language} = useLanguage()
+   const placeholderName = language === 'es' ? 'Ingresa tu nombre' : 'Name'
+   const placeholderEmail = language === 'es' ? 'Ingresa tu correo' : 'Email'
+   const placeholderMessage = language === 'es' ? 'Escribe tu mensaje' : 'Message'
+
+
 
    const sendEmail = (event: React.FormEvent) => {
       event.preventDefault();
@@ -27,8 +40,7 @@ export const Contact = () => {
          console.error('One or more environment variables are missing.');
          return;
       }
-      /*  setLoading(true); // Activar el indicador de carga
-       */
+
       emailjs
          .sendForm(
             serviceId,
@@ -54,9 +66,7 @@ export const Contact = () => {
                position: toast.POSITION.BOTTOM_RIGHT,
             });
          });
-      /*       .finally(() => {
-            setLoading(false); // Desactivar el indicador de carga después de la promesa
-         }); */
+
    };
 
    return (
@@ -66,9 +76,9 @@ export const Contact = () => {
       >
          <section className="mt-32 lg:mb-44">
             <h2 className="text-4xl font-bold">
-               Get in Touch<strong className="font-bold">.</strong>
+               <Translation translationKey="contact"/><strong className="font-bold">.</strong>
             </h2>
-            <p>don't be shy, and leave me a message :)</p>
+            <p><Translation translationKey="contact.p"/></p>
             <div className="mt-3">
                <div className="flex gap-2 ">
                   <svg
@@ -157,7 +167,7 @@ export const Contact = () => {
                onSubmit={sendEmail}
                className="p-10 flex flex-col gap-2"
             >
-               <label htmlFor="user_name">Name:</label>
+               <label htmlFor="user_name"><Translation translationKey="nameForm" /></label>
                <input
                   required
                   minLength={4}
@@ -165,11 +175,11 @@ export const Contact = () => {
                   name="user_name"
                   onChange={handleChange}
                   value={formData.user_name}
-                  placeholder="Name"
+                  placeholder={placeholderName}
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none "
                />
                <label htmlFor="user_email" className="mt-4">
-                  Email:
+                  <Translation translationKey="emailForm" />
                </label>
                <input
                   required
@@ -177,11 +187,11 @@ export const Contact = () => {
                   name="user_email"
                   onChange={handleChange}
                   value={formData.user_email}
-                  placeholder="Email"
+                  placeholder={placeholderEmail}
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none"
                />
                <label htmlFor="message" className="mt-4">
-                  Message:
+                  <Translation translationKey="messageForm" />
                </label>
                <textarea
                   required
@@ -189,11 +199,11 @@ export const Contact = () => {
                   onChange={handleChange}
                   value={formData.message}
                   id=""
-                  placeholder="Message"
+                  placeholder={placeholderMessage}
                   className="p-2 rounded-md bg-[#071739] border border-[#0090FF] focus:border-blue-300 focus:outline-none resize-none h-[15rem]"
                ></textarea>
                <button className="btn-portfolio border border-corp bg-corp p-2 rounded-md mt-3 font-medium">
-                  Send
+                  <Translation translationKey="btnSubmit" />
                </button>
             </form>
             <ToastContainer />

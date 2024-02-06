@@ -16,7 +16,7 @@ export const Navbar = () => {
 
    const { language, toggleLanguage } = useLanguage();
    return (
-      <div className="fixed w-full bg-[#05112a] h-14">
+      <nav className="fixed w-full bg-[#05112a] h-14">
          <header className="container mx-auto w-[90%] md:w-[80%] sm:w-[90%] lg:w-[80%] flex items-center justify-between pl-0 pr-0 ">
             <Link
                className="z-20"
@@ -48,18 +48,19 @@ export const Navbar = () => {
                <ul className="flex flex-col gap-y-4 lg:flex-row">
                   <Link
                      to="hero"
-                     className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
+                     className="text-white text-lg p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
                      spy={true}
                      smooth={true}
                      offset={-200}
                      duration={500}
                      onClick={closeMenu}
+                     
                   >
                      <Translation translationKey="nav.home" />
                   </Link>
                   <Link
                      to="about"
-                     className="text-white text-xl p-2 pt-1 pb-1  font-bold block lg:inline lg:mr-6 nav-link"
+                     className="text-white text-lg p-2 pt-1 pb-1  font-bold block lg:inline lg:mr-6 nav-link"
                      spy={true}
                      smooth={true}
                      offset={-90}
@@ -70,7 +71,7 @@ export const Navbar = () => {
                   </Link>
                   <Link
                      to="projects"
-                     className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
+                     className="text-white text-lg p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
                      spy={true}
                      smooth={true}
                      offset={-70}
@@ -81,7 +82,7 @@ export const Navbar = () => {
                   </Link>
                   <Link
                      to="contact"
-                     className="text-white text-xl p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
+                     className="text-white text-lg p-2 pt-1 pb-1 font-bold block lg:inline lg:mr-6 nav-link"
                      spy={true}
                      smooth={true}
                      offset={60}
@@ -113,9 +114,9 @@ export const Navbar = () => {
                   </button>
                </div>
             </div>
-            <div className="lg:flex md:flex-row hidden ">
+            <div className="lg:flex md:flex-row hidden  ">
                <button className="language-button" onClick={toggleLanguage}>
-                  {language === 'en' ? 'EN' : 'ES'}
+                  <span className='text-base'>{language === 'en' ? 'EN' : 'ES'}</span>
                </button>
                <button className="theme-button">
                   <svg
@@ -135,6 +136,6 @@ export const Navbar = () => {
                </button>
             </div>
          </header>
-      </div>
+      </nav>
    );
 };

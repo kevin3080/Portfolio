@@ -2,11 +2,17 @@ import ProjectCard from './ProjectCard';
 import projectsData from '../data/projects';
 import { useState } from 'react';
 import { BurguerButtonTwo } from './BurguerButtonTwo';
+import { useLanguage } from '../Context/LanguageContext';
+import Translation from '../translate/Translation';
 
 export const Projects: React.FC = () => {
    const [menuOpen, setMenuOpen] = useState(false);
-   const [selectedCategory, setSelectedCategory] = useState('Todos'); // Nuevo estado para almacenar la categoría seleccionada
 
+   let categories: string[] = [];
+   const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Nuevo estado para almacenar la categoría seleccionada
+   
+   const { language } = useLanguage();
+   language === 'es' ?  categories = ['Todos', 'Web', 'Movil', 'Backend'] :  categories = ['All', 'Web', 'Mobile', 'Backend'];
    const handlerClick = () => {
       setMenuOpen(!menuOpen);
    };
@@ -15,9 +21,9 @@ export const Projects: React.FC = () => {
       setSelectedCategory(category);
       setMenuOpen(false); // Cerrar el menú cuando se selecciona una categoría
    };
-   const categories = ['Todos', 'Web', 'Movil', 'Backend'];
+
    const filteredProjects = projectsData.filter(project => {
-      if (selectedCategory === 'Todos') {
+      if (selectedCategory === 'Todos' || selectedCategory === 'All') {
          return true; // Mostrar todos los proyectos si la categoría es "Todos"
       } else if (selectedCategory === 'Web') {
          // Filtrar proyectos relacionados con tecnologías web
@@ -28,7 +34,7 @@ export const Projects: React.FC = () => {
                tech === 'Vite' ||
                tech === 'Next.js' // Agrega otras tecnologías web según sea necesario
          );
-      } else if (selectedCategory === 'Movil') {
+      } else if (selectedCategory === 'Movil' || selectedCategory === 'Mobile') {
          // Filtrar proyectos relacionados con tecnologías móviles
          return project.technology.some(
             tech =>
@@ -54,11 +60,10 @@ export const Projects: React.FC = () => {
       <section id="projects" className="mt-5 ">
          <section>
             <h2 className="text-center text-4xl font-bold">
-               Projects<strong className="font-bold">.</strong>
+               <Translation translationKey="Projects"/><strong className="font-bold">.</strong>
             </h2>
             <p className="text-center mt-7 text-xl">
-               Anything you can <span className="text-corp">imagine</span>, you
-               can <span className="text-corp">program.</span>
+               <Translation translationKey="Projects.p" /> <Translation style='text-corp' translationKey="Projects.pspan" /><Translation translationKey="Projects.pnext" /> <Translation style='text-corp' translationKey="Projects.pspan2" />
             </p>
          </section>
 
