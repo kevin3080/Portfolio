@@ -9,10 +9,10 @@ export const Projects: React.FC = () => {
    const [menuOpen, setMenuOpen] = useState(false);
 
    let categories: string[] = [];
-   const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Nuevo estado para almacenar la categoría seleccionada
-   
    const { language } = useLanguage();
    language === 'es' ?  categories = ['Todos', 'Web', 'Movil', 'Backend'] :  categories = ['All', 'Web', 'Mobile', 'Backend'];
+   const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Nuevo estado para almacenar la categoría seleccionada
+   
    const handlerClick = () => {
       setMenuOpen(!menuOpen);
    };
