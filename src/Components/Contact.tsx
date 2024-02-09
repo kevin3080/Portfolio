@@ -143,7 +143,7 @@ export const Contact = () => {
                </button>
                <button>
                   <a
-                     href="https://www.linkedin.com/in/kevin-pernia-540052144/"
+                     href="https://www.linkedin.com/in/kevinpernia/"
                      target="_blank"
                      rel="noopener noreferrer"
                   >
