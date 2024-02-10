@@ -1,19 +1,20 @@
 import { Projects } from '../Interfaces';
+import imageTest from '../assets/template.jpg'
 
 interface ProjectCardProps {
    project: Projects;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-   const { title, description, technology } = project;
+   const { title, description, technology, image } = project;
 
    return (
       <div className="shadow-lg p-1 m-4 max-w-sm">
-         <div
-            className="w-[300px] h-[236px] overflow-hidden bg-white rounded-t-2xl
+         <div className="w-[300px] h-[236px] overflow-hidden rounded-t-2xl">
 
-"
-         ></div>
+            {/* <img src={image} alt={title} className="w-full h-full object-cover" /> */}
+            <img src={imageTest} alt={title} className="w-full h-full object-cover" />
+         </div>
          <div className="min-h-min w-[300px] bg-[#071739] rounded-b-2xl p-6 pb-8">
             <h2 className="text-xl font-bold mb-2">{title}</h2>
             <p className=" mb-4">{description}</p>

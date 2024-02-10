@@ -55,7 +55,7 @@ const App = () => {
             <h3 className='text-xl font-bold mt-5'>Next Steps:</h3>
             <ul className='list-disc pl-5 pt-5'>
                <li>Improve the projects section by adding a modal to give more details of the projects.</li>
-               <li>Work on an attractive design to show the images of my projects.</li>
+               <li>Work on an attractive design to show the images of my projects. <span className='font-bold'>(working on this)</span></li>
                <li>Add completed projects.</li>
                <li>Add light theme.</li>
             </ul>

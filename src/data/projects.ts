@@ -1,9 +1,10 @@
 import { Projects } from '../Interfaces';
+import imageTest from '../assets/template.jpg'
 
 const projects: Projects[] = [
    {
       id: 1,
-      image: '',
+      image: `${ imageTest }`,
       title: 'Advice App',
       description: 'tips application built with React and sass',
       technology: ['React', 'Vite', 'SASS', 'HTML'],
@@ -21,7 +22,7 @@ const projects: Projects[] = [
    },
    {
       id: 3,
-      image: '',
+      image: `${ imageTest }`,
       title: 'Probando proyecto mobile',
       description: 'Eccomerce built with React and Tailwind CSS',
       technology: ['React Native', 'Tailwind', 'CSS', 'Axios'],
