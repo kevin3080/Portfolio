@@ -63,7 +63,7 @@ export const Inicio = () => {
             <div className="flex mt-8">
                <button className=" w-30 ">
                   <a
-                     href="https://drive.google.com/file/d/1vKL5OZ3t5N3fF6BhASOyuL8KK-tqc6Gs/view?usp=drivesdk"
+                     href="https://drive.usercontent.google.com/download?id=1vKL5OZ3t5N3fF6BhASOyuL8KK-tqc6Gs&export=download&authuser=0&confirm=t&uuid=c0d43a9e-17be-431b-8ad0-ee9fe58b0b95&at=APZUnTUdZe4_uowd1tUgSxMOYsUq:1708262641671"
                      download={'resume'}
                      title="descargar resume"
                      className="btn-resume flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1"
