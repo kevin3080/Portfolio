@@ -11,18 +11,8 @@ export const About = () => {
             <strong className="font-bold">.</strong>
          </h2>
 
-         <section className="mt-7 flex flex-col lg:items-center ">
-            <div>
-               <p className="text-xl">
-                  <Translation translationKey="about.p1" />
-               </p>
-               <p className="text-xl">
-                  <Translation translationKey="about.p2" />
-               </p>
-               <p className="text-xl">
-                  <Translation translationKey="about.p3" />
-               </p>
-            </div>
+         <section className="mt-7">
+            <p className="text-xl text-justify"><Translation style='text-justify tracking-[-0.10em] md:tracking-[-0.05em]' translationKey="about.p" /></p>
          </section>
          <section className=" flex flex-col items-center">
             <section className=" mt-4 w-[90%] md:w-[80%] sm:w-[90%] lg:w-[70%]">
