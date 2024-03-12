@@ -1,7 +1,7 @@
 import { useLanguage } from "../Context/LanguageContext";
 import { coursesEn, coursesEs } from "../data/courses";
 import Translation from "../translate/Translation";
-import { BurguerButtonTwo } from "./BurguerButtonTwo";
+import { BurgerButtonTwo } from "./BurgerButtonTwo";
 import { useState } from "react";
 
 export const Education = () => {
@@ -31,9 +31,10 @@ export const Education = () => {
             <h3 className="text-2xl">
               <Translation translationKey="about.education" />
             </h3>
-            <BurguerButtonTwo menuOpen={menuOpen} handlerClick={handlerClick} />
+            <BurgerButtonTwo menuOpen={menuOpen} handlerClick={handlerClick} />
           </button>
         </div>
+        {/* menu mobile */}
         {menuOpen && (
           <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-1 lg:hidden">
             {language === "es"

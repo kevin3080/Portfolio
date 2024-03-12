@@ -1,7 +1,7 @@
 import ProjectCard from './ProjectCard';
 import projectsData from '../data/projects';
 import { useState } from 'react';
-import { BurguerButtonTwo } from './BurguerButtonTwo';
+import { BurgerButtonTwo } from './BurgerButtonTwo';
 import { useLanguage } from '../Context/LanguageContext';
 import Translation from '../translate/Translation';
 
@@ -79,7 +79,7 @@ export const Projects: React.FC = () => {
             >
                <div className="invisible pl-14"></div>
                {selectedCategory}
-               <BurguerButtonTwo
+               <BurgerButtonTwo
                   menuOpen={menuOpen}
                   handlerClick={handlerClick}
                />

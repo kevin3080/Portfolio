@@ -2,7 +2,7 @@ import Translation from '../translate/Translation';
 import { useLanguage } from '../Context/LanguageContext';
 import '../Styles/nav.css';
 import { useState } from 'react';
-import { BurguerButton } from './BurguerButton';
+import { BurgerButton } from './BurgerButton';
 import { Link } from 'react-scroll';
 
 export const Navbar = () => {
@@ -32,7 +32,7 @@ export const Navbar = () => {
             </Link>
 
             <div className="lg:hidden overflow-hidden z-20">
-               <BurguerButton menuOpen={menuOpen} handlerClick={handlerClick} />
+               <BurgerButton menuOpen={menuOpen} handlerClick={handlerClick} />
             </div>
 
             <div

@@ -28,7 +28,7 @@ export interface Translations {
    [key: string]: string;
 }
 
-export interface BurguerButtonProps {
+export interface BurgerButtonProps {
    handlerClick: () => void;
    menuOpen: boolean;
 }
