@@ -1,5 +1,5 @@
 import Translation from "../translate/Translation";
-import { Css, Express, Html, JavaScript, Laravel, Liverwire, Nextjs, Node, React, ReactNative, Sass, Tailwind, Typescript, Vue } from "./stacks";
+import { Css, Express, Html, JavaScript, Laravel, Liverwire, Nextjs, Node, Php, React, ReactNative, Sass, Tailwind, Typescript, Vue } from "./stacks";
 
 export const About = () => {
   return (
@@ -41,6 +41,7 @@ export const About = () => {
             {/* <Nestjs/> */}
             <Node/>
             <Express/>
+            <Php/>
             <Liverwire/>
             <Laravel/>
             <Vue/>
