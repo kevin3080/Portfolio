@@ -35,6 +35,7 @@ export const About = () => {
               style="text-wrap"
               translationKey="about.px"
             />
+         </p>
 {/*
             <Translation translationKey="about.p" />
           </p>
