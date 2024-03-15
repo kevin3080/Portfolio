@@ -1,8 +1,8 @@
 import Translation from "../translate/Translation";
 
-export const Footer = () => {
+export const Footer = ({ theme }: { theme: string }) => {
    return (
-      <section className="p-2 text-center">
+      <footer className={`p-2 text-center ${theme === 'dark' ? 'bg-black' : 'bg-[#f5f5f5]'}`}>
          <cite className="font-mono text-sm flex flex-col">
             <div>
                <Translation translationKey="footer.description" />
@@ -12,6 +12,6 @@ export const Footer = () => {
             </div>
             <Translation style="font-light text-[11px] text-gray-400" translationKey="footer.copyright" />
          </cite>
-      </section>
+      </footer>
    );
 };

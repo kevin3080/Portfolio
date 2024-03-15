@@ -1,12 +1,12 @@
 import { useLanguage } from '../Context/LanguageContext';
-import autor from '../assets/imagen-mia.jpeg';
+import author from '../assets/my-image.jpeg';
 import Translation from '../translate/Translation';
 import Typewriter from 'typewriter-effect';
 import es from '../translate/es.json';
 import en from '../translate/en.json';
 import { Link } from 'react-scroll';
 
-export const Inicio = () => {
+export const Inicio = ({ theme }: { theme: string }) => {
    const { language } = useLanguage();
 
    return (
@@ -14,14 +14,14 @@ export const Inicio = () => {
          id="hero"
          className="container mb-10 mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%] gap-x-2"
       >
-         <section className="w-[55%] mt-8 lg:mt-0 flex flex-col items-center lg:items-start  ">
+         <section className={`w-[55%] mt-8 lg:mt-0 flex flex-col items-center lg:items-start ${theme === 'dark' ? 'text-white' : 'text-[#071739]'} `}>
             <div className=" sm:w-auto text-center lg:text-left">
                <p className="text-2xl lg:text-3xl whitespace-nowrap">
                   <Translation translationKey="inicio.hi" />
                </p>
-               <div className="h-[5rem] w-[17rem] sm:h-auto sm:w-auto">
+               <div className={`relative z-[-1] h-[5rem] w-[17rem] sm:h-auto sm:w-auto ${theme === 'dark' ? 'text-corp' : 'text-[#071739]'}`}>
                   {language === 'en' ? (
-                     <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces ">
+                     <h1 className="text-4xl lg:text-5xl whitespace-break-spaces">
                         <Typewriter
                            options={{
                               strings: [
@@ -37,7 +37,7 @@ export const Inicio = () => {
                         />
                      </h1>
                   ) : (
-                     <h1 className="text-4xl lg:text-5xl text-corp whitespace-break-spaces">
+                     <h1 className="text-4xl lg:text-5xl whitespace-break-spaces">
                         <Typewriter
                            options={{
                               strings: [
@@ -66,7 +66,7 @@ export const Inicio = () => {
                      href="https://drive.usercontent.google.com/download?id=1vKL5OZ3t5N3fF6BhASOyuL8KK-tqc6Gs&export=download&authuser=0&confirm=t&uuid=c0d43a9e-17be-431b-8ad0-ee9fe58b0b95&at=APZUnTUdZe4_uowd1tUgSxMOYsUq:1708262641671"
                      download={'resume'}
                      title="descargar resume"
-                     className="btn-resume flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1"
+                     className={`${theme === 'dark' ? 'btn-resume-dark text-corp border-corp' : 'btn-resume text-[#071739] border-[#071739]'} flex items-center text-corp border border-corp border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1`}
                   >
                      <p className="">
                         <Translation translationKey="inicio.resume" />
@@ -118,7 +118,7 @@ export const Inicio = () => {
             </div>
          </section>
          <div className="w-60 h-60 md:w-80 md:h-80 lg:w-95 lg:h-95 rounded-3xl overflow-hidden mt-[3rem] lg:mt-0 ">
-            <img src={autor} alt="" className="object-cover h-full w-full" />
+            <img src={author} alt="" className="object-cover h-full w-full" />
          </div>
       </section>
    );

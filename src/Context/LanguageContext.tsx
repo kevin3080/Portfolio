@@ -5,10 +5,11 @@ const LanguageContext = createContext<LanguageContextProps | undefined>(
   undefined
 );
 
-export const LangageProvider: React.FC<LanguageProviderProps> = ({
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
   const [language, setLanguage] = useState('en');
+  document.documentElement.lang = language;
 
   const toggleLanguage = () => {
     setLanguage(prevLanguage => (prevLanguage === 'en' ? 'es' : 'en'));
@@ -26,7 +27,7 @@ export const useLanguage = (): LanguageContextProps => {
   const context = useContext(LanguageContext);
 
   if (!context) {
-    throw new Error('useLenguage must be used within a LanguageProvider');
+    throw new Error('useLanguage must be used within a LanguageProvider');
   }
 
   return context;

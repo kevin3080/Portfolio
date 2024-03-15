@@ -1,5 +1,21 @@
 import Translation from "../translate/Translation";
-import { Css, Express, Html, JavaScript, Laravel, Liverwire, Nextjs, Node, Php, React, ReactNative, Sass, Tailwind, Typescript, Vue } from "./stacks";
+import {
+  Css,
+  Express,
+  Html,
+  JavaScript,
+  Laravel,
+  Liverwire,
+  Nextjs,
+  Node,
+  Php,
+  React,
+  ReactNative,
+  Sass,
+  Tailwind,
+  Typescript,
+  Vue,
+} from "./stacks";
 
 export const About = () => {
   return (
@@ -13,12 +29,21 @@ export const About = () => {
       </h2>
 
       <section className="mt-7">
-        <p className="text-xl text-justify">
-          <Translation
-            style="text-justify tracking-[-0.10em] md:tracking-[-0.05em]"
-            translationKey="about.p"
-          />
-        </p>
+        <div className="flex flex-col items-center text-xl">
+          <p className="">
+            <Translation
+              style="text-wrap"
+              translationKey="about.px"
+            />
+            <Translation translationKey="about.p" />
+          </p>
+          {/* <p className="">
+            <Translation translationKey="about.p1" />
+          </p>
+          <p className="">
+            <Translation translationKey="about.p2" />
+          </p> */}
+        </div>
       </section>
       <section className=" flex flex-col items-center">
         <section className=" mt-4 w-[90%] md:w-[80%] sm:w-[90%] lg:w-[70%]">
@@ -27,24 +52,24 @@ export const About = () => {
           </h3>
           {/* <ul className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-2"> */}
           <ul className="mt-3 grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5">
-            <Html/>
-            <Css/>
-            <JavaScript/>
-            <React/>
-            <ReactNative/>
-            <Typescript/>
-            <Sass/>
-            <Tailwind/>
+            <Html />
+            <Css />
+            <JavaScript />
+            <React />
+            <ReactNative />
+            <Typescript />
+            <Sass />
+            <Tailwind />
             {/* <Bootstrap/> */}
             {/* <Mui/> */}
-            <Nextjs/>
+            <Nextjs />
             {/* <Nestjs/> */}
-            <Node/>
-            <Express/>
-            <Php/>
-            <Liverwire/>
-            <Laravel/>
-            <Vue/>
+            <Node />
+            <Express />
+            <Php />
+            <Liverwire />
+            <Laravel />
+            <Vue />
             {/* <Threejs/> */}
           </ul>
         </section>

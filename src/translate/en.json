@@ -13,7 +13,10 @@
    "inicio.portfolio": "Portfolio",
 
    "about.me": "About me",
-   "about.p": "I am a passionate, creative and persistent programmer. I enjoy solving problems and crafting innovative solutions. Continuous learning and teamwork bring me satisfaction, and I always strive for excellence in my projects.",
+   "about.px": "I am a passionate, creative and persistent programmer. I enjoy solving problems and crafting innovative solutions. Continuous learning and teamwork bring me satisfaction, and I always strive for excellence in my projects.",
+   "about.p": "I am a passionate, creative and persistent programmer. I enjoy solving problems and crafting innovative",
+   "about.p1": "solutions. Continuous learning and teamwork bring me satisfaction, and I always strive for excellence",
+   "about.p2": "in my projects.",
    "about.tech": "Tech Stack:",
 
    "about.education": "Education:",

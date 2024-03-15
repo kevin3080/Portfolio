@@ -13,7 +13,10 @@
    "inicio.portfolio": "Portafolio",
 
    "about.me": "Sobre mí",
-   "about.p": "Soy un apasionado programador, caracterizado por mi creatividad y persistencia. Disfruto resolviendo problemas y diseñando soluciones innovadoras. El aprendizaje continuo y la colaboración en equipo son fuentes constantes de satisfacción para mí, y siempre persigo la excelencia en mis proyectos.",
+   "about.px": "Soy un apasionado programador, caracterizado por mi creatividad y persistencia. Disfruto resolviendo problemas y diseñando soluciones innovadoras. El aprendizaje continuo y la colaboración en equipo son fuentes constantes de satisfacción para mí, y siempre persigo la excelencia en mis proyectos.",
+   "about.p": "Soy un apasionado programador, caracterizado por mi creatividad y persistencia. Disfruto resolviendo",
+   "about.p1": "problemas y diseñando soluciones innovadoras. El aprendizaje continuo y la colaboración en equipo son",
+   "about.p2": "fuentes constantes de satisfacción para mí, y siempre persigo la excelencia en mis proyectos.",
    "about.tech": "Mis Habilidades Tech:",
 
    "about.education": "Educación:",

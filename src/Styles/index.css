@@ -10,10 +10,31 @@
    font-family: 'Open Sans', sans-serif;
    font-weight: 400;
 }
-body {
+
+@media (prefers-color-scheme: dark) {
+   html {
+      background-color: #05112a;
+      color: white;
+   }
+}
+
+@media (prefers-color-scheme: light) {
+   html {
+      background-color: #f5f5f5;
+      color: #05112a;
+   }
+}
+
+.light {
+   background-color: #f5f5f5;
+   color: black;
+}
+
+.dark {
    background-color: #05112a;
    color: white;
 }
+
 
 h1 div span {
    font-weight: bold;
@@ -23,10 +44,20 @@ h1 div span {
    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out,
       color 0.1s ease-in-out;
 }
+.btn-resume-dark {
+   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out,
+      color 0.1s ease-in-out;
+}
 
-.btn-resume:hover {
+.btn-resume-dark:hover {
    background-color: #0090ff;
    border-color: #0090ff;
+   color: white;
+}
+
+.btn-resume:hover {
+   background-color: #071739;
+   border-color: #071739;
    color: white;
 }
 
@@ -85,16 +116,5 @@ h2 span {
    font-weight: bold;
 }
 
-h2 strong {
-   color: #0090ff;
-}
 
-.light {
-   background-color: white;
-   color: black;
-}
 
-.dark {
-   background-color: black;
-   color: white;
-}
