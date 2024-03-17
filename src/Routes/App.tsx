@@ -68,7 +68,7 @@ const App = () => {
       </div>
       <Navbar handleChangeTheme={handleChangeTheme} theme={theme} />
       <Inicio theme={theme} />
-      <About />
+      <About theme={theme} />
       <Education />
       <Projects />
       <Contact />

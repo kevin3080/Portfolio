@@ -17,7 +17,7 @@ import {
   Vue,
 } from "./stacks";
 
-export const About = () => {
+export const About = ({theme} : {theme: string}) => {
   return (
     <section
       id="about"
@@ -62,10 +62,10 @@ export const About = () => {
             <Tailwind />
             {/* <Bootstrap/> */}
             {/* <Mui/> */}
-            <Nextjs />
+            <Nextjs theme={theme} />
             {/* <Nestjs/> */}
             <Node />
-            <Express />
+            <Express theme={theme} />
             <Php />
             <Liverwire />
             <Laravel />

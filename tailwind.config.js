@@ -14,6 +14,7 @@ export default {
       },
       colors: {
         corp: '#0090ff',
+        themeLight: '#071739',
       },
     },
   },
