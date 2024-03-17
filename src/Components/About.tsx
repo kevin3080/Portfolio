@@ -35,9 +35,11 @@ export const About = ({theme} : {theme: string}) => {
               style="text-wrap"
               translationKey="about.px"
             />
+         </p>
+{/*
             <Translation translationKey="about.p" />
           </p>
-          {/* <p className="">
+           <p className="">
             <Translation translationKey="about.p1" />
           </p>
           <p className="">
