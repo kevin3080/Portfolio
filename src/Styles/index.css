@@ -71,6 +71,17 @@ h1 div span {
    color: #0090ff;
 }
 
+.btn-portfolio-dark{
+   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+}
+
+.btn-portfolio-dark.active {
+   background-color: transparent;
+   border-color: #071739;
+   color: #071739;
+}
+
 .ham {
    cursor: pointer;
    -webkit-tap-highlight-color: transparent;

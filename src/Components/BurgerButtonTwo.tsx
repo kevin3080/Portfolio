@@ -3,7 +3,15 @@ import { BurgerButtonProps } from '../Interfaces';
 export const BurgerButtonTwo: React.FC<BurgerButtonProps> = ({
    handlerClick,
    menuOpen,
+   theme
 }) => {
+   const changeTheme = () => {
+      if (theme === 'light') {
+         return '';
+      } else {
+         return 'light';
+      }
+   }
    const buttonClass = menuOpen
       ? 'ham hamRotate hamSection active'
       : 'ham hamRotate hamSection';

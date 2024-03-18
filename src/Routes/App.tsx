@@ -70,7 +70,7 @@ const App = () => {
       <Inicio theme={theme} />
       <About theme={theme} />
       <Education />
-      <Projects />
+      <Projects theme={theme} />
       <Contact />
       <Footer theme={theme} />
     </>

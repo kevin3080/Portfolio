@@ -31,4 +31,5 @@ export interface Translations {
 export interface BurgerButtonProps {
    handlerClick: () => void;
    menuOpen: boolean;
+   theme: string
 }
