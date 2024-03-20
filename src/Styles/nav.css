@@ -142,6 +142,14 @@
    stroke-linecap: round;
 }
 
+.line-light {
+   fill: none;
+   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+   stroke: #071739;
+   stroke-width: 4.5;
+   stroke-linecap: round;
+}
+
 .ham4 .top {
    stroke-dasharray: 40 121;
 }
@@ -167,6 +175,18 @@
    right: 0;
    text-align: center;
    transition: all 0.3s ease;
+}
+
+.ham.active .top {
+   stroke: #0090ff;
+   stroke-dashoffset: -68px;
+}
+.ham.active .middle {
+   stroke: #0090ff;
+}
+.ham.active .bottom {
+   stroke: #0090ff;
+   stroke-dashoffset: -68px;
 }
 
 .bg-bur {

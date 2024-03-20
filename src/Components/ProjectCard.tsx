@@ -1,25 +1,27 @@
 import { Projects } from '../Interfaces';
 import imageTest from '../assets/template.jpg'
+import Translation from '../translate/Translation';
 
 interface ProjectCardProps {
    project: Projects;
+   theme: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
    const { title, description, technology } = project; //  image
 
    return (
-      <div className="shadow-lg p-1 m-4 max-w-sm">
+      <div className="p-1 m-4 max-w-sm">
          <div className="w-[300px] h-[236px] overflow-hidden rounded-t-2xl">
 
             {/* <img src={image} alt={title} className="w-full h-full object-cover" /> */}
             <img src={imageTest} alt={title} className="w-full h-full object-cover" />
          </div>
-         <div className="min-h-min w-[300px] bg-[#071739] rounded-b-2xl p-6 pb-8">
+         <div className={`min-h-min w-[300px] text-white bg-[#071739] rounded-b-2xl p-6 pb-8`}>
             <h2 className="text-xl font-bold mb-2">{title}</h2>
             <p className=" mb-4">{description}</p>
             <div className="mb-4">
-               <h3 className="font-semibold mb-1">Tecnologías Utilizadas:</h3>
+               <h3 className="font-semibold mb-1"><Translation translationKey="Projects.techUse" /></h3>
                <ul className="flex flex-wrap">
                   {technology.map((tech, index) => (
                      <li className="pr-2 text-gray-400" key={index}>

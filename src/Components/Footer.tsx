@@ -1,10 +1,10 @@
 import Translation from "../translate/Translation";
 
-export const Footer = ({ theme }: { theme: string }) => {
+export const Footer = () => {
    return (
-      <footer className={`p-2 text-center ${theme === 'dark' ? 'bg-black' : 'bg-[#f5f5f5]'}`}>
+      <footer className={`p-2 text-center bg-[#05112a]`}>
          <cite className="font-mono text-sm flex flex-col">
-            <div>
+            <div className="text-white" >
                <Translation translationKey="footer.description" />
                <a href="https://github.com/kevin3080" target="_blank">
                   Kevin Pernia

@@ -71,15 +71,15 @@ h1 div span {
    color: #0090ff;
 }
 
-.btn-portfolio-dark{
+.btn-portfolio-light {
    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
       color 0.2s ease-in-out;
 }
 
-.btn-portfolio-dark.active {
+.btn-portfolio-light.active {
    background-color: transparent;
-   border-color: #071739;
-   color: #071739;
+   border-color: #0090ff;
+   color: #0090ff;
 }
 
 .ham {
@@ -101,6 +101,14 @@ h1 div span {
    fill: none;
    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
    stroke: white;
+   stroke-width: 4.5;
+   stroke-linecap: round;
+}
+
+.lineSection-light {
+   fill: none;
+   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+   stroke: #071739;
    stroke-width: 4.5;
    stroke-linecap: round;
 }

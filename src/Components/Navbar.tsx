@@ -46,7 +46,7 @@ export const Navbar = ({ handleChangeTheme, theme }: NavbarProps) => {
         </Link>
 
         <div className="lg:hidden overflow-hidden z-20">
-          <BurgerButton menuOpen={menuOpen} handlerClick={handlerClick} />
+          <BurgerButton menuOpen={menuOpen} handlerClick={handlerClick} theme={theme} />
         </div>
 
         <div

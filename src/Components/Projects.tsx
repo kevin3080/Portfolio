@@ -73,10 +73,10 @@ export const Projects = ({ theme }: { theme: string }) => {
 
       <div
         className={`${
-          theme === "light" ? "btn-portfolio-dark text-corp" : "btn-portfolio"
+          theme === "light" ? "btn-portfolio-light border-themeLight" : "btn-portfolio"
         } ${
-          menuOpen ? "active" : ""
-        } border border-corp lg:hidden overflow-hidden flex justify-center rounded-md  mt-4 container mx-auto  w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%]`}
+          menuOpen ? "active border-corp text-corp" : ""
+        } border lg:hidden overflow-hidden flex justify-center rounded-md  mt-4 container mx-auto  w-[90%] md:w-[80%] sm:w-[90%] lg:w-[65%]`}
       >
         <button
           id="btnProjects"
@@ -88,7 +88,7 @@ export const Projects = ({ theme }: { theme: string }) => {
           <BurgerButtonTwo
             menuOpen={menuOpen}
             handlerClick={handlerClick}
-            theme={`${theme === "light" ? "light" : "dark"}`}
+            theme={theme}
           />
         </button>
       </div>
@@ -102,7 +102,7 @@ export const Projects = ({ theme }: { theme: string }) => {
                 onClick={() => handleCategoryClick(category)}
                 className={`${
                   theme === "light"
-                    ? "btn-portfolio bg-themeLight border border-themeLight text-white hover:text-themeLight"
+                    ? "btn-portfolio-light bg-themeLight border border-themeLight text-white hover:text-themeLight"
                     : "btn-portfolio bg-corp border border-corp"
                 } pt-1 pb-1  hover:bg-transparent ${
                   index === 0 ? "lg:ml-0" : "lg:ml-20"
@@ -135,7 +135,7 @@ export const Projects = ({ theme }: { theme: string }) => {
       </section>
       <section className="flex flex-wrap justify-center mt-9 container mx-auto w-[10%] md:w-[80%] sm:w-[90%] lg:w-[80%]">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} theme={theme} />
         ))}
       </section>
     </section>
