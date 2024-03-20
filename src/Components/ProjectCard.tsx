@@ -7,7 +7,7 @@ interface ProjectCardProps {
    theme: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
    const { title, description, technology } = project; //  image
 
    return (
