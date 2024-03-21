@@ -31,8 +31,10 @@ export const Projects = ({ theme }: { theme: string }) => {
       // Filtrar proyectos relacionados con tecnologías web
       return project.technology.some(
         (tech) =>
+          tech === "HTML" ||
           tech === "React" ||
           tech === "Angular" ||
+          tech === "Vue" ||
           tech === "Vite" ||
           tech === "Next.js" // Agrega otras tecnologías web según sea necesario
       );
@@ -51,7 +53,9 @@ export const Projects = ({ theme }: { theme: string }) => {
           tech === ".net" ||
           tech === "C#" ||
           tech === "Express" ||
-          tech === "NestJS"
+          tech === "NestJS" ||
+          tech === "PHP" ||
+          tech === "Laravel" 
       );
     }
     return false; // Por defecto, no mostrar nada si no hay coincidencia con las categorías anteriores
