@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import projectsData from "../data/projects";
+import { projectsDataEn, projectsDataEs } from "../data/indexProjects";
 import { useState } from "react";
 import { BurgerButtonTwo } from "./BurgerButtonTwo";
 import { useLanguage } from "../Context/LanguageContext";
@@ -23,6 +23,8 @@ export const Projects = ({ theme }: { theme: string }) => {
     setSelectedCategory(category);
     setMenuOpen(false); // Cerrar el menú cuando se selecciona una categoría
   };
+
+  const projectsData = language === "en" ? projectsDataEn : projectsDataEs;
 
   const filteredProjects = projectsData.filter((project) => {
     if (selectedCategory === "Todos" || selectedCategory === "All") {
