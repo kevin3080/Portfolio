@@ -6,12 +6,10 @@ import { Navbar } from "../Components/Navbar";
 import { Projects } from "../Components/Projects";
 import { Footer } from "../Components/Footer";
 import { useEffect, useState } from "react";
-import { ModalConstructDark } from "../Components/ModalConstructDark";
-import { ModalConstructLight } from "../Components/ModalConstructLight";
 
 
 const App = () => {
-  const [isModalOpen, setModalOpen] = useState(true);
+  /* const [isModalOpen, setModalOpen] = useState(true); */
   const [theme, setTheme] = useState(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       return "dark";
@@ -50,22 +48,22 @@ const App = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   // Cierra la modal después de un tiempo o en respuesta a alguna acción
-  useEffect(() => {
+ /*  useEffect(() => {
     const timeout = setTimeout(() => {
       setModalOpen(false);
     }, 8000); // Cierra la modal después de 5 segundos
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, []); */
 
   return (
     <>
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         {
           theme === "dark" ? <ModalConstructDark isModalOpen={isModalOpen} setModalOpen={setModalOpen}/> 
           : <ModalConstructLight isModalOpen={isModalOpen} setModalOpen={setModalOpen}/>
         }
-      </div>
+      </div> */}
       <Navbar handleChangeTheme={handleChangeTheme} theme={theme} />
       <Inicio theme={theme} />
       <About theme={theme} />
