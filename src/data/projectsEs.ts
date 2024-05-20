@@ -1,5 +1,5 @@
 import { Projects } from '../Interfaces';
-import { CountryApp, GifApp, AdviceApp, ComingSoon, Landing, TodoApp, CrudSequelize } from './indexImages';
+import { CountryApp, GifApp, AdviceApp, Landing, TodoApp, CrudSequelize } from './indexImages';
 
 const projects: Projects[] = [
    {
@@ -56,15 +56,15 @@ const projects: Projects[] = [
       UriDemo: 'https://kevin3080.github.io/landing-page/',
       UriRepo: 'https://github.com/kevin3080/landing-page',
    },
-   {
-      id: 7,
-      image: `${ ComingSoon }`,
-      title: 'Api of Tips',
-      description: 'En esta aplicación crearé una api que contendrá más de 200 consejos diferentes en inglés y español.',
-      technology: ['PHP', 'Laravel'],
-      UriDemo: '',
-      UriRepo: '',
-   },
+   // {
+   //    id: 7,
+   //    image: `${ ComingSoon }`,
+   //    title: 'Api of Tips',
+   //    description: 'En esta aplicación crearé una api que contendrá más de 200 consejos diferentes en inglés y español.',
+   //    technology: ['PHP', 'Laravel'],
+   //    UriDemo: '',
+   //    UriRepo: '',
+   // },
    /* {
       id: 7,
       image: `${ ComingSoon }`,

@@ -1,5 +1,5 @@
 import { Projects } from '../Interfaces';
-import { CountryApp, GifApp, AdviceApp, ComingSoon, Landing, TodoApp, CrudSequelize } from './indexImages';
+import { CountryApp, GifApp, AdviceApp, Landing, TodoApp, CrudSequelize } from './indexImages';
 
 const projects: Projects[] = [
    {
