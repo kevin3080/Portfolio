@@ -1,5 +1,5 @@
 import { Projects } from '../Interfaces';
-import { CountryApp, GifApp, AdviceApp, ComingSoon, Landing, TodoApp } from './indexImages';
+import { CountryApp, GifApp, AdviceApp, ComingSoon, Landing, TodoApp, CrudSequelize } from './indexImages';
 
 const projects: Projects[] = [
    {
@@ -22,6 +22,15 @@ const projects: Projects[] = [
    },
    {
       id: 3,
+      image: `${ CrudSequelize }`,
+      title: 'CRUD with Node and Express',
+      description: 'En esta aplicación realicé un crud completo con node y express. Fue una buena oportunidad para aprender Sequelize y PostgreSQL, hice el deploy del back en render.',
+      technology: ['Node', 'Express', 'Javascript', 'Sequelize', 'PostgreSQL', 'React', 'Vite', 'Bootstrap', 'Axios'],
+      UriDemo: 'https://main--crud-react-node-express.netlify.app/',
+      UriRepo: 'https://github.com/kevin3080/crud_mysql_sequelize_Node',
+   },
+   {
+      id: 4,
       image: `${ TodoApp }`,
       title: 'Todo App',
       description: 'Con este proyecto puse en práctica lo aprendido en un curso de react, implementé redux toolkit para gestionar el contexto global de mi aplicación y además reforcé conocimientos de SCSS y CSS.',
@@ -30,7 +39,7 @@ const projects: Projects[] = [
       UriRepo: 'https://github.com/kevin3080/Todo-app',
    },
    {
-      id: 4,
+      id: 5,
       image: `${ AdviceApp }`,
       title: 'Advice App',
       description: 'Esta aplicación está construida con React y SCSS. Con este proyecto puse en práctica las llamadas apis con Fetch.',
@@ -39,7 +48,7 @@ const projects: Projects[] = [
       UriRepo: 'https://github.com/kevin3080/Advice-app',
    },
    {
-      id: 5,
+      id: 6,
       image: `${ Landing }`,
       title: 'Landing Page',
       description: 'Esta página de aterrizaje está construida con HTML y SCSS con este mini proyecto pongo en práctica SCSS.',
@@ -48,7 +57,7 @@ const projects: Projects[] = [
       UriRepo: 'https://github.com/kevin3080/landing-page',
    },
    {
-      id: 6,
+      id: 7,
       image: `${ ComingSoon }`,
       title: 'Api of Tips',
       description: 'En esta aplicación crearé una api que contendrá más de 200 consejos diferentes en inglés y español.',

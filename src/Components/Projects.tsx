@@ -57,7 +57,11 @@ export const Projects = ({ theme }: { theme: string }) => {
           tech === "Express" ||
           tech === "NestJS" ||
           tech === "PHP" ||
-          tech === "Laravel" 
+          tech === "Laravel" ||
+          tech === "Node" ||
+          tech === "Sequelize" ||
+          tech === "PostgreSQL" ||
+          tech === "MongoDB"
       );
     }
     return false; // Por defecto, no mostrar nada si no hay coincidencia con las categorías anteriores
