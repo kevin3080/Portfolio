@@ -9,6 +9,8 @@ import { Link } from "react-scroll";
 export const Inicio = ({ theme }: { theme: string }) => {
   const { language } = useLanguage();
 
+  const urlCv: string = import.meta.env.VITE_URL_CV
+
   return (
     <section
       id="hero"
@@ -71,7 +73,7 @@ export const Inicio = ({ theme }: { theme: string }) => {
         <div className="flex mt-8">
           <button className=" w-30 ">
             <a
-              href="https://drive.usercontent.google.com/download?id=1vKL5OZ3t5N3fF6BhASOyuL8KK-tqc6Gs&export=download&authuser=0&confirm=t&uuid=c0d43a9e-17be-431b-8ad0-ee9fe58b0b95&at=APZUnTUdZe4_uowd1tUgSxMOYsUq:1708262641671"
+              href={`${urlCv}`}
               download={"resume"}
               title="download_resume"
               className={`${
