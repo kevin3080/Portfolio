@@ -12,8 +12,8 @@ export const Projects = ({ theme }: { theme: string }) => {
   let categories: string[] = [];
   const { language } = useLanguage();
   language === "es"
-    ? (categories = ["Todos", "Web", "Movil", "Backend"])
-    : (categories = ["All", "Web", "Mobile", "Backend"]);
+    ? (categories = ["Todos", "Web", "Movil"])
+    : (categories = ["All", "Web", "Mobile"]);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Nuevo estado para almacenar la categoría seleccionada
 
   const handlerClick = () => {

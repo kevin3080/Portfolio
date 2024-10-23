@@ -52,7 +52,6 @@ export const Inicio = ({ theme }: { theme: string }) => {
                     strings: [
                       en["inicio.prof"],
                       en["inicio.prof1"],
-                      en["inicio.prof2"],
                     ],
                     autoStart: true,
                     loop: true,
@@ -68,7 +67,6 @@ export const Inicio = ({ theme }: { theme: string }) => {
                     strings: [
                       es["inicio.prof"],
                       es["inicio.prof1"],
-                      es["inicio.prof2"],
                     ],
                     autoStart: true,
                     loop: true,
