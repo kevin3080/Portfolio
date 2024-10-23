@@ -85,7 +85,7 @@ export const Inicio = ({ theme }: { theme: string }) => {
           </p>
         </div>
 
-        <div className="flex mt-8 flex-wrap gap-2 lg:gap-0 h-5 md:h-0 w-full justify-center lg:justify-normal ">
+        <div className="flex mt-8 flex-wrap gap-5 lg:gap-0 h-5 md:h-0 w-full justify-center lg:justify-normal ">
           <button 
             onClick={toggleActive}
             className={`w-30 h-[2.1rem] ${isActive ? "bg-corp text-white" : ""} ${
