@@ -29,7 +29,7 @@ export const Inicio = ({ theme }: { theme: string }) => {
   return (
     <section
       id="hero"
-      className="container mb-10 mx-auto flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%] gap-x-2"
+      className="container lg:mb-10 mx-auto mb-24 flex justify-center h-screen items-center w-[90%] md:w-[80%] flex-col-reverse sm:w-[90%] lg:flex-row lg:w-[80%] gap-x-2"
     >
       <section
         className={`w-[55%] mt-8 lg:mt-0 flex flex-col items-center lg:items-start ${
@@ -85,7 +85,7 @@ export const Inicio = ({ theme }: { theme: string }) => {
           </p>
         </div>
 
-        <div className="flex mt-8 flex-wrap h-5 md:h-0 w-full justify-center lg:justify-normal ">
+        <div className="flex mt-8 flex-wrap gap-2 lg:gap-0 h-5 md:h-0 w-full justify-center lg:justify-normal ">
           <button 
             onClick={toggleActive}
             className={`w-30 h-[2.1rem] ${isActive ? "bg-corp text-white" : ""} ${
@@ -118,7 +118,7 @@ export const Inicio = ({ theme }: { theme: string }) => {
               smooth={true}
               offset={-80}
               duration={500}
-              className={`btn-portfolio flex items-center ml-4 ${
+              className={`btn-portfolio flex items-center lg:ml-4 ${
                 theme === "dark"
                   ? " border bg-corp border-corp"
                   : "border bg-themeLight border-themeLight text-white"
