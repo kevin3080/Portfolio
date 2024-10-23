@@ -5,11 +5,26 @@ import Typewriter from "typewriter-effect";
 import es from "../translate/es.json";
 import en from "../translate/en.json";
 import { Link } from "react-scroll";
+import { useState } from "react";
 
 export const Inicio = ({ theme }: { theme: string }) => {
   const { language } = useLanguage();
+  const [isActive, setIsActive] = useState(false);
 
-  const urlCv: string = import.meta.env.VITE_URL_CV
+  const toggleActive = () => {
+    setIsActive(!isActive);
+    console.log(isActive);
+  };
+
+  const downloadCv = (lang: string) => {
+    const urlCv_en: string = import.meta.env.VITE_URL_CV
+    const urlCv_es: string = import.meta.env.VITE_URL_CV_ES
+    if (lang === "es") {
+      window.open(urlCv_es, "_blank");
+    } else {
+      window.open(urlCv_en, "_blank");
+    }
+  }
 
   return (
     <section
@@ -70,18 +85,14 @@ export const Inicio = ({ theme }: { theme: string }) => {
           </p>
         </div>
 
-        <div className="flex mt-8">
-          <button className=" w-30 ">
-            <a
-              href={`${urlCv}`}
-              download={"resume"}
-              title="download_resume"
-              className={`${
+        <div className="flex mt-8 flex-wrap h-5 md:h-0 w-full justify-center lg:justify-normal ">
+          <button 
+            onClick={toggleActive}
+            className={`w-30 h-[2.1rem] ${isActive ? "bg-corp text-white" : ""} ${
                 theme === "dark"
                   ? "btn-resume-dark border text-corp border-corp"
                   : "border btn-resume text-themeLight border-themeLight"
-              } flex items-center border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1`}
-            >
+              } flex items-center border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1`}>
               <p className="">
                 <Translation translationKey="inicio.resume" />
               </p>
@@ -99,9 +110,8 @@ export const Inicio = ({ theme }: { theme: string }) => {
                   d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                 />
               </svg>
-            </a>
           </button>
-          <button className=" w-30">
+          <button className="w-30 h-[2.1rem]">
             <Link
               to="projects"
               spy={true}
@@ -133,7 +143,27 @@ export const Inicio = ({ theme }: { theme: string }) => {
               </svg>
             </Link>
           </button>
+          <div className={`absolute ${isActive ? "flex" : "hidden"} ml-[-8rem] gap-2 bottom-[-0.8rem] sm:bottom-[1.5rem] md:bottom-[-1.5rem] lg:bottom-[9.5rem] lg:ml-[-4.5rem]`}>
+          <button 
+            onClick={() => downloadCv('es')}
+            className={`w-25 ${
+                theme === "dark"
+                  ? "btn-resume-dark border text-corp border-corp"
+                  : "border btn-resume text-themeLight border-themeLight"
+              } flex items-center border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1`}
+          >
+            CV - Español
+            </button>
+          <button 
+            onClick={() => downloadCv('en')}
+            className={`w-30 text-nowrap ${
+                theme === "dark"
+                  ? "btn-resume-dark border text-corp border-corp"
+                  : "border btn-resume text-themeLight border-themeLight"
+              } flex items-center border-solid rounded-md  pr-4  pl-4 pt-1 pb-1 gap-1`}>CV - English</button>
         </div>
+        </div>
+        
       </section>
       <div className="w-60 h-60 md:w-80 md:h-80 lg:w-95 lg:h-95 rounded-3xl overflow-hidden mt-[3rem] lg:mt-0 ">
         <img src={author} alt="" className="object-cover h-full w-full" />

@@ -1,9 +1,10 @@
 import ProjectCard from "./ProjectCard";
-import { projectsDataEn, projectsDataEs } from "../data/indexProjects";
 import { useState } from "react";
 import { BurgerButtonTwo } from "./BurgerButtonTwo";
 import { useLanguage } from "../Context/LanguageContext";
 import Translation from "../translate/Translation";
+import { ListProjects } from "../Interfaces";
+import { projectsEn, projectsEs } from "../data/indexProjects";
 
 export const Projects = ({ theme }: { theme: string }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,9 +25,9 @@ export const Projects = ({ theme }: { theme: string }) => {
     setMenuOpen(false); // Cerrar el menú cuando se selecciona una categoría
   };
 
-  const projectsData = language === "en" ? projectsDataEn : projectsDataEs;
+  const projectsData= language === "en" ? projectsEn : projectsEs
 
-  const filteredProjects = projectsData.filter((project) => {
+  const filteredProjects: ListProjects[] = projectsData.filter((project: ListProjects) => {
     if (selectedCategory === "Todos" || selectedCategory === "All") {
       return true; // Mostrar todos los proyectos si la categoría es "Todos"
     } else if (selectedCategory === "Web") {

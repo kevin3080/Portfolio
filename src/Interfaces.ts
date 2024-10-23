@@ -1,13 +1,16 @@
 import { ReactNode } from 'react';
 
-export interface Projects {
-   id: number;
+export interface ArrProjects {
    image: string;
    title: string;
    description: string;
    technology: string[];
    UriDemo: string;
    UriRepo: string;
+}
+
+export interface ListProjects extends ArrProjects {
+   id: number;
 }
 
 export interface LanguageContextProps {
