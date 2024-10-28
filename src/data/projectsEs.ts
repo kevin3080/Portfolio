@@ -9,9 +9,19 @@ import {
   AgencyLanding,
   PruebaVue,
   TestDango,
+  HangmanGame,
 } from './indexImages';
 
 const arrProjects: ArrProjects[] = [
+  {
+    image: `${HangmanGame}`,
+    title: 'Juego del Ahorcado',
+    description:
+      'en este proyecto hice un juego del ahorcado con vuejs. Desarrolle un teclado virtual que permite interactuar con el juego, tiene un sistema de puntuación basado en la vida y las palabras correctas. También tiene una colección de palabras categorizadas por nombres, países, colores y objetos.',
+    technology: ['Vue', 'Typescript', 'CSS', 'Pina'],
+    UriDemo: 'https://hangman-kev.netlify.app/',
+    UriRepo: 'https://github.com/kevin3080/Hangman-Game',
+  },
   {
     image: `${TestDango}`,
     title: 'Prueba técnica React, E-Commerce',

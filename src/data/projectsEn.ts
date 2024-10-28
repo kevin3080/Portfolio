@@ -9,9 +9,19 @@ import {
   AgencyLanding,
   TestDango,
   PruebaVue,
+  HangmanGame,
 } from './indexImages';
 
 const arrProjects: ArrProjects[] = [
+  {
+    image: `${HangmanGame}`,
+    title: 'Hangman Game',
+    description:
+      'in this project I made a hangman game with vuejs. Develop a virtual keyboard that allows you to interact with the game, it has a scoring system based on life and correct words. It also has a collection of words categorized by names, countries, colors and objects.',
+    technology: ['Vue', 'Typescript', 'CSS', 'Pina'],
+    UriDemo: 'https://hangman-kev.netlify.app/',
+    UriRepo: 'https://github.com/kevin3080/Hangman-Game',
+  },
   {
     image: `${TestDango}`,
     title: 'React Technical Test, E-Commerce',

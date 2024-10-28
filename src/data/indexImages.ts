@@ -8,6 +8,7 @@ import CrudSequelize from '../assets/Crud-Seq.jpg';
 import AgencyLanding from '../assets/agency_landing.webp';
 import PruebaVue from '../assets/testVue.webp';
 import TestDango from '../assets/testDango.webp';
+import HangmanGame from '../assets/hangman.webp';
 
 export {
   CountryApp,
@@ -19,5 +20,6 @@ export {
   CrudSequelize,
   AgencyLanding,
   PruebaVue,
-  TestDango
+  TestDango,
+  HangmanGame,
 };
