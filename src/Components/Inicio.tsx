@@ -13,16 +13,15 @@ export const Inicio = ({ theme }: { theme: string }) => {
 
   const toggleActive = () => {
     setIsActive(!isActive);
-    console.log(isActive);
   };
 
   const downloadCv = (lang: string) => {
     const urlCv_en: string = import.meta.env.VITE_URL_CV
     const urlCv_es: string = import.meta.env.VITE_URL_CV_ES
     if (lang === "es") {
-      window.open(urlCv_es, "_blank");
+      window.open(urlCv_es, "_blank", "noopener noreferrer");
     } else {
-      window.open(urlCv_en, "_blank");
+      window.open(urlCv_en, "_blank", "noopener noreferrer");
     }
   }
 
